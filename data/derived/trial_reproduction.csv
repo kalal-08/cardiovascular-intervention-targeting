@@ -1,0 +1,2 @@
+model,analysis_n,villages,estimate,std_error,ci_lower,ci_upper,test_statistic,p_value,converged,published_estimate,published_ci_lower,published_ci_upper,absolute_estimate_difference,same_direction,ci_overlaps,same_substantive_conclusion,reproduction_status
+primary_adjusted_mixed_model_reml,4508,127,-1.8799816659919089,0.3491037551570854,-2.5642124529674852,-1.1957508790163323,-5.385165980658036,7.237782647986374e-08,True,-1.88,-2.57,-1.19,1.833400809103658e-05,True,True,True,REPRODUCED

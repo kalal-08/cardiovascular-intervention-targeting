@@ -40,3 +40,26 @@ Classical analysis examines six prespecified moderators: age, sex, education, oc
 A compact Simple HTE benchmark is compared with one advanced model, a cluster-aware R `grf` causal forest. Only pre-treatment predictors enter the feature matrix. Identifiers, assignment, follow-up measurements, outcome availability and derived evaluation scores are excluded as predictors. Whole villages are held out in five folds; predictions cover the randomized population, while outcome fitting/evaluation uses observed outcomes. Both models are trained without the held-out villages.
 
 The forest uses honest estimation and the trial's target propensity of 0.5. This does not reconstruct the full county-stratified minimisation mechanism. Model complexity was not expanded merely to obtain a favorable winner. See [HTE validation](HTE_VALIDATION.md) for evidence and [rollout](ROLLOUT_AND_UNCERTAINTY.md) for decision-level interpretation.
+
+## Scientific reproduction
+
+The reviewed Python source, three R scripts, scientific tests and dependency configuration are included. Acquire the anonymized SMARTER CSV separately from the linked Dryad record (version 4, file 4062477), respecting its dataset terms. Save it as `data/raw/smarter_anonymised_data.csv`. The expected SHA-256 is `2a42364e388ed21ae9b4dc0038424c3e4e4ffb60e9aebd8edef7db8d356b7741`; do not substitute a different dataset version silently.
+
+From the repository root in PowerShell, with Python and R installed:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -e ".[test]"
+Rscript -e "renv::restore(prompt=FALSE)"
+python -m pytest tests/test_public_boundary.py -q
+Get-FileHash data/raw/smarter_anonymised_data.csv -Algorithm SHA256
+python scripts/run_analysis.py
+python -m pytest
+```
+
+The runner constructs the cohort, reproduces the average effect, estimates classical heterogeneity, cross-fits Simple HTE/GRF, validates prioritization/calibration, aggregates villages, evaluates rollout, bootstraps uncertainty and computes robustness. Generation must precede data-dependent tests. Uncertainty figures required by preservation tests are regenerated; historical captures are not prerequisites. No editable Power BI files or restricted reference implementation are required.
+
+Python dependencies use minimum versions, not a fully pinned environment. The validation runtime uses Python 3.14.5, NumPy 2.4.6, pandas 3.0.3, statsmodels 0.15.0, Matplotlib 3.10.9 and pytest 9.1.1; `renv.lock` records R 4.6.1 and GRF 2.6.1. Numerical-library changes can affect floating-point output bytes. Model tolerances and substantive conclusions, not cross-platform byte identity, govern scientific reproduction.
+
+Raw data, participant-level intermediates, generated figures and installed packages remain ignored. Only eight explicitly reviewed aggregate CSVs are publication exceptions; other generated outputs must not be added wholesale. The web continues to build from its independently validated frozen JSON. Private Power BI model paths and editable report reproduction are outside this workflow.

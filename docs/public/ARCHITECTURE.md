@@ -11,7 +11,7 @@ Locally retained trial data → Python/R estimation and cluster-aware validation
                               └─ deterministic whitelist export → public JSON → React/ECharts
 ```
 
-Scientific estimates are not recomputed in the browser. Public documentation explains the methods, but this release does not distribute the local scientific implementation, participant-level working records or editable Power BI source. The original anonymized dataset is externally available through the source linked in the [methods](ANALYSIS_METHODS.md); local retention does not mean all inputs are inherently confidential.
+Scientific estimates are not recomputed in the browser. Reviewed Python/R source, scientific tests and eight aggregate CSVs are public; participant-level working records and editable Power BI source are excluded. The original anonymized dataset is externally available through the source linked in the [methods](ANALYSIS_METHODS.md); local retention does not mean all inputs are inherently confidential.
 
 ## Public artifact responsibilities
 
@@ -20,7 +20,9 @@ Scientific estimates are not recomputed in the browser. Public documentation exp
 | React/TypeScript source and web checks | Inspectable interactive implementation | Builds independently from shipped aggregate assets |
 | Aggregate JSON, schemas and manifest | Typed, integrity-checked browser data | Frozen analytical outputs, not participant-level inputs |
 | Power BI PDF, images and specification | Evidence of the implemented five-page report | Static outputs, not editable report/model source |
-| Curated methods and technical docs | Estimands, reasoning, design and validation | Explain the analysis without promising an executable public scientific pipeline |
+| Python/R source, scientific tests and dependency configuration | Cohort construction, estimation and policy evaluation | Requires separately acquired source data and regeneration before data-dependent tests |
+| Eight aggregate CSVs | Reviewed scientific results | Not participant-level inputs or the complete intermediate output inventory |
+| Curated methods and technical docs | Estimands, reasoning, design and validation | Document acquisition, execution order and remaining limitations |
 
 ## Data boundary
 

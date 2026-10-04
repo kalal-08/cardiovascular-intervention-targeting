@@ -72,6 +72,15 @@ The current public release contains:
 
 ```text
 cardiovascular-intervention-targeting/
+├── src/intervention_targeting/ # Python cohort, estimation, validation and policy analysis
+├── r/                        # Cluster-aware GRF and RATE validation
+├── tests/                    # Scientific and publication-boundary regressions
+├── scripts/run_analysis.py   # Ordered scientific regeneration
+├── data/derived/             # Eight reviewed aggregate CSVs; other outputs ignored
+├── renv/                     # Dependency bootstrap/settings, not installed packages
+├── renv.lock                 # R dependency lock
+├── .Rprofile
+├── pyproject.toml            # Python dependencies and test configuration
 ├── docs/public/              # Scientific methods, architecture and validation
 ├── powerbi/
 │   └── PUBLIC_README.md      # Power BI implementation and final screenshot links
@@ -90,7 +99,7 @@ cardiovascular-intervention-targeting/
 └── README.md
 ```
 
-The scientific Python/R implementation and its root tests are retained locally and are **not yet included in this public release**. Their methodology and findings are documented below.
+The reviewed Python/R implementation and scientific tests are included. Raw participant data must be acquired separately; participant-level intermediates, installed packages and generated figures remain ignored.
 
 ## Run locally
 
@@ -108,6 +117,8 @@ Open `http://127.0.0.1:4173/overview`. Stop preview with Ctrl+C; use `npm.cmd ru
 
 The public web build requires no participant-level data or Power BI installation. Scientific regeneration and deeper local checks have separate dependencies.
 
+For scientific setup, source acquisition and generation order, see [scientific reproduction](docs/public/ANALYSIS_METHODS.md#scientific-reproduction). The eight supplied CSVs are approved aggregate results, not substitutes for the source data needed to fit models.
+
 ## Methods and validation
 
 - [Analysis methods and provenance](docs/public/ANALYSIS_METHODS.md)
@@ -121,6 +132,6 @@ Local data reconciliation passes 141 frozen analytical targets and six web-data 
 
 Source references: [SMARTER publication](https://doi.org/10.1136/bmj-2024-082765) · [Dryad dataset](https://doi.org/10.5061/dryad.tmpg4f58w).
 
-The public application includes reviewed aggregate JSON, not participant-level raw or derived working records. The source dataset is publicly available through Dryad; the complete local scientific pipeline and intermediate outputs are not distributed here.
+The public repository includes reviewed scientific source, eight aggregate CSVs and the web application's aggregate JSON. Participant-level raw or derived working records are not distributed here. The original anonymized source dataset is publicly available through Dryad and must be acquired separately for scientific regeneration.
 
 Editable Power BI report/model files remain private. Internal plans, agent instructions, execution logs and backups stay local; useful technical reasoning is curated in the public documentation.

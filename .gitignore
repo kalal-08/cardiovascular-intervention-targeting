@@ -8,6 +8,7 @@ __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
 .venv/
+*.egg-info/
 
 # R
 renv/library/
@@ -58,16 +59,22 @@ node_modules/
 /web/dist-spikes/
 /web/.wrangler/
 
-# Private/local scientific reproduction (public web source is web/src/)
-/data/
-/src/
-/r/
-/tests/
+# Local scientific outputs; reviewed source/configuration is public
+/data/*
+!/data/derived/
+/data/derived/*
+!/data/derived/trial_reproduction.csv
+!/data/derived/baseline_balance.csv
+!/data/derived/classical_interactions.csv
+!/data/derived/classical_subgroup_effects.csv
+!/data/derived/hte_validation_summary.csv
+!/data/derived/calibration_summary.csv
+!/data/derived/anchor_policy_uncertainty.csv
+!/data/derived/final_policy_robustness_summary.csv
 /output/
-/renv/
-/renv.lock
-/pyproject.toml
-/.Rprofile
+/renv/*
+!/renv/activate.R
+!/renv/settings.json
 
 # Only the curated Power BI documentation is public source
 /powerbi/*
