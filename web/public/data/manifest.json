@@ -1,0 +1,276 @@
+{
+  "schema_version": "1.0.0",
+  "export_version": "1.0.0",
+  "contract_version": "12C.0",
+  "generator": "web/scripts/export_web_data.py",
+  "source_group_sha256": "1f88ebb7ec6caf45277784ae85a256f54f91f9eadef808a892bf349d4d992a55",
+  "dictionary_sha256": "bb9970b11bc3807d8a6ca921a1822102c9d3905c291fc0e3e707d954a0ce0b18",
+  "targets_sha256": "935607602725e9454b4c94de91778452ca6dc85e308fb4806d2885421cf42d82",
+  "schemas": {
+    "file": "schemas.json",
+    "sha256": "340b394eebc1c0a35ec5413e4c59ed521b68abc7908277acbb07c7605c36b578"
+  },
+  "reconciliation": {
+    "targets_checked": 141,
+    "targets_passed": 141,
+    "targets_not_applicable": 0,
+    "target_ids": [
+      "study.randomized_participants",
+      "study.evaluation_participants",
+      "study.missing_primary_outcome",
+      "study.villages",
+      "study.intervention_villages",
+      "study.control_villages",
+      "study.intervention_participants",
+      "study.control_participants",
+      "effect.estimate",
+      "effect.ci_lower",
+      "effect.ci_upper",
+      "hte.autoc.grf",
+      "hte.autoc.simple",
+      "hte.autoc.baseline_risk",
+      "hte.autoc.random",
+      "hte.calibration.grf",
+      "hte.calibration.simple",
+      "hte.classification.grf_hte_validation",
+      "hte.classification.incremental_grf_vs_simple",
+      "hte.classification.grf_vs_baseline_risk",
+      "anchor.baseline_risk.K13.rollout_value",
+      "anchor.baseline_risk.K13.random_expected",
+      "anchor.baseline_risk.K13.gain_vs_random",
+      "anchor.baseline_risk.K13.value_ci_lower",
+      "anchor.baseline_risk.K13.value_ci_upper",
+      "anchor.baseline_risk.K13.gain_ci_lower",
+      "anchor.baseline_risk.K13.gain_ci_upper",
+      "anchor.baseline_risk.K13.capacity_label",
+      "anchor.baseline_risk.K32.rollout_value",
+      "anchor.baseline_risk.K32.random_expected",
+      "anchor.baseline_risk.K32.gain_vs_random",
+      "anchor.baseline_risk.K32.value_ci_lower",
+      "anchor.baseline_risk.K32.value_ci_upper",
+      "anchor.baseline_risk.K32.gain_ci_lower",
+      "anchor.baseline_risk.K32.gain_ci_upper",
+      "anchor.baseline_risk.K32.capacity_label",
+      "anchor.baseline_risk.K64.rollout_value",
+      "anchor.baseline_risk.K64.random_expected",
+      "anchor.baseline_risk.K64.gain_vs_random",
+      "anchor.baseline_risk.K64.value_ci_lower",
+      "anchor.baseline_risk.K64.value_ci_upper",
+      "anchor.baseline_risk.K64.gain_ci_lower",
+      "anchor.baseline_risk.K64.gain_ci_upper",
+      "anchor.baseline_risk.K64.capacity_label",
+      "anchor.baseline_risk.K95.rollout_value",
+      "anchor.baseline_risk.K95.random_expected",
+      "anchor.baseline_risk.K95.gain_vs_random",
+      "anchor.baseline_risk.K95.value_ci_lower",
+      "anchor.baseline_risk.K95.value_ci_upper",
+      "anchor.baseline_risk.K95.gain_ci_lower",
+      "anchor.baseline_risk.K95.gain_ci_upper",
+      "anchor.baseline_risk.K95.capacity_label",
+      "anchor.baseline_risk.K127.rollout_value",
+      "anchor.baseline_risk.K127.random_expected",
+      "anchor.baseline_risk.K127.gain_vs_random",
+      "anchor.baseline_risk.K127.value_ci_lower",
+      "anchor.baseline_risk.K127.value_ci_upper",
+      "anchor.baseline_risk.K127.gain_ci_lower",
+      "anchor.baseline_risk.K127.gain_ci_upper",
+      "anchor.baseline_risk.K127.capacity_label",
+      "anchor.grf.K13.rollout_value",
+      "anchor.grf.K13.random_expected",
+      "anchor.grf.K13.gain_vs_random",
+      "anchor.grf.K13.value_ci_lower",
+      "anchor.grf.K13.value_ci_upper",
+      "anchor.grf.K13.gain_ci_lower",
+      "anchor.grf.K13.gain_ci_upper",
+      "anchor.grf.K13.capacity_label",
+      "anchor.grf.K32.rollout_value",
+      "anchor.grf.K32.random_expected",
+      "anchor.grf.K32.gain_vs_random",
+      "anchor.grf.K32.value_ci_lower",
+      "anchor.grf.K32.value_ci_upper",
+      "anchor.grf.K32.gain_ci_lower",
+      "anchor.grf.K32.gain_ci_upper",
+      "anchor.grf.K32.capacity_label",
+      "anchor.grf.K64.rollout_value",
+      "anchor.grf.K64.random_expected",
+      "anchor.grf.K64.gain_vs_random",
+      "anchor.grf.K64.value_ci_lower",
+      "anchor.grf.K64.value_ci_upper",
+      "anchor.grf.K64.gain_ci_lower",
+      "anchor.grf.K64.gain_ci_upper",
+      "anchor.grf.K64.capacity_label",
+      "anchor.grf.K95.rollout_value",
+      "anchor.grf.K95.random_expected",
+      "anchor.grf.K95.gain_vs_random",
+      "anchor.grf.K95.value_ci_lower",
+      "anchor.grf.K95.value_ci_upper",
+      "anchor.grf.K95.gain_ci_lower",
+      "anchor.grf.K95.gain_ci_upper",
+      "anchor.grf.K95.capacity_label",
+      "anchor.grf.K127.rollout_value",
+      "anchor.grf.K127.random_expected",
+      "anchor.grf.K127.gain_vs_random",
+      "anchor.grf.K127.value_ci_lower",
+      "anchor.grf.K127.value_ci_upper",
+      "anchor.grf.K127.gain_ci_lower",
+      "anchor.grf.K127.gain_ci_upper",
+      "anchor.grf.K127.capacity_label",
+      "anchor.simple.K13.rollout_value",
+      "anchor.simple.K13.random_expected",
+      "anchor.simple.K13.gain_vs_random",
+      "anchor.simple.K13.value_ci_lower",
+      "anchor.simple.K13.value_ci_upper",
+      "anchor.simple.K13.gain_ci_lower",
+      "anchor.simple.K13.gain_ci_upper",
+      "anchor.simple.K13.capacity_label",
+      "anchor.simple.K32.rollout_value",
+      "anchor.simple.K32.random_expected",
+      "anchor.simple.K32.gain_vs_random",
+      "anchor.simple.K32.value_ci_lower",
+      "anchor.simple.K32.value_ci_upper",
+      "anchor.simple.K32.gain_ci_lower",
+      "anchor.simple.K32.gain_ci_upper",
+      "anchor.simple.K32.capacity_label",
+      "anchor.simple.K64.rollout_value",
+      "anchor.simple.K64.random_expected",
+      "anchor.simple.K64.gain_vs_random",
+      "anchor.simple.K64.value_ci_lower",
+      "anchor.simple.K64.value_ci_upper",
+      "anchor.simple.K64.gain_ci_lower",
+      "anchor.simple.K64.gain_ci_upper",
+      "anchor.simple.K64.capacity_label",
+      "anchor.simple.K95.rollout_value",
+      "anchor.simple.K95.random_expected",
+      "anchor.simple.K95.gain_vs_random",
+      "anchor.simple.K95.value_ci_lower",
+      "anchor.simple.K95.value_ci_upper",
+      "anchor.simple.K95.gain_ci_lower",
+      "anchor.simple.K95.gain_ci_upper",
+      "anchor.simple.K95.capacity_label",
+      "anchor.simple.K127.rollout_value",
+      "anchor.simple.K127.random_expected",
+      "anchor.simple.K127.gain_vs_random",
+      "anchor.simple.K127.value_ci_lower",
+      "anchor.simple.K127.value_ci_upper",
+      "anchor.simple.K127.gain_ci_lower",
+      "anchor.simple.K127.gain_ci_upper",
+      "anchor.simple.K127.capacity_label",
+      "policy.final_conclusion"
+    ],
+    "coverage_contexts": 75,
+    "ranking_policies": 3,
+    "gain_intervals_including_zero": 12
+  },
+  "datasets": {
+    "overview": {
+      "file": "overview.json",
+      "rows": 1,
+      "sha256": "93dde934ba684ed281b72bd85f58bee06ea18e4837b13c655621be23ec38bb9d",
+      "source": {
+        "name": "bi_intervention_summary.csv",
+        "sha256": "df7d8591d1ba76a0c311247723077bb4aef8fdfe5e7de9029e5e94cb3adecd93"
+      },
+      "schema": "overview"
+    },
+    "villages": {
+      "file": "villages.json",
+      "rows": 127,
+      "sha256": "d328da5d8345e5b1811c99f227c04d6f435017ff7bef21173c75139a945a851a",
+      "source": {
+        "name": "bi_village_priority.csv",
+        "sha256": "8cb4eb76c5ccd942ef35408ac6a1d6b07731b8aae9e75ee7b69b4cc125a89d25"
+      },
+      "schema": "villages"
+    },
+    "validation": {
+      "file": "validation.json",
+      "rows": 15,
+      "sha256": "fb3643396e9d0cad7afd9ff398a9cae66316229c0155d976d83801b59da17ecc",
+      "source": {
+        "name": "bi_hte_validation.csv",
+        "sha256": "ea3851fc995fd19ab866e18ef227ef455dec01d50172c90a2931c2a993231a16"
+      },
+      "schema": "validation"
+    },
+    "subgroups": {
+      "file": "subgroups.json",
+      "rows": 13,
+      "sha256": "395a6d44233d590d8dd01e620f09a8dd6981b49d90ff15e611b433d7a40f3e2a",
+      "source": {
+        "name": "bi_classical_subgroup_effects.csv",
+        "sha256": "6ab6a568a1c796d5135a830921da49291f6c9767a59ca763edb49e450c3c3f7b"
+      },
+      "schema": "subgroups"
+    },
+    "rollout": {
+      "file": "rollout.json",
+      "rows": 384,
+      "sha256": "3f47ad8fd973f272e0a4cdf3c8d4fe9a80c2297c2d81883814f4d38298005189",
+      "source": {
+        "name": "bi_rollout_capacity.csv",
+        "sha256": "87dc66883518525afc26fa20dc116f6a9fe1f584f050a682965f0bddc5366bea"
+      },
+      "schema": "rollout"
+    },
+    "anchors": {
+      "file": "anchors.json",
+      "rows": 15,
+      "sha256": "32312a920e4b7e13af498adc9a7a35f3e5e9311fc2a2b5d7c3a766a4c4a57387",
+      "source": {
+        "name": "bi_rollout_anchor.csv",
+        "sha256": "561ffc1ce2ebaa9f7e3dd6b65d072e85b446bf93bdce8ac67ae5190bc7c6a58b"
+      },
+      "schema": "anchors"
+    },
+    "overlap": {
+      "file": "overlap.json",
+      "rows": 15,
+      "sha256": "bc340ee4cb7a81727d8fc8ec95bf0e31a20f23efa7f732ed468ae4daff719d4a",
+      "source": {
+        "name": "bi_policy_overlap.csv",
+        "sha256": "acf1ec0776e17b617089a717968c3740655fdc5a92a5f71d46a46d64e33ba840"
+      },
+      "schema": "overlap"
+    },
+    "robustness": {
+      "file": "robustness.json",
+      "rows": 12,
+      "sha256": "e43e8386b024349ab7c0fb28749560268ae8419480121d77aa7d177176c54db4",
+      "source": {
+        "name": "bi_policy_robustness.csv",
+        "sha256": "cb6aa2b64f27de3b7a89bfc83205ea1d9528e298f5b10b40a63e2a125b63e0c8"
+      },
+      "schema": "robustness"
+    },
+    "coverage": {
+      "file": "coverage.json",
+      "rows": 150,
+      "sha256": "2a1cceaff81c06daa2f2134ed06e48ef0dc813713347a1a7c8f905f7d83e0f71",
+      "source": {
+        "name": "bi_equity_coverage.csv",
+        "sha256": "a05b7bb87e9822b8ad24b80898f6e672d2c6ae89f8076f7fbc26600ebadca1b3"
+      },
+      "schema": "coverage"
+    },
+    "policies": {
+      "file": "policies.json",
+      "rows": 3,
+      "sha256": "af400eab027bc79177f79b42c76bb85a9d6fb2f2ac03b82af747f84046ea48b0",
+      "source": {
+        "name": "dim_policy.csv",
+        "sha256": "194c2347f96b6fe3d066c7c52db8b75f18fdf3b8d48b4814e82422f912a9f052"
+      },
+      "schema": "policies"
+    },
+    "capacities": {
+      "file": "capacities.json",
+      "rows": 128,
+      "sha256": "93bc8089353e79b161abe1607d299c2b79dfae2ad838b137a037a3f7d3216890",
+      "source": {
+        "name": "dim_capacity.csv",
+        "sha256": "e80caf6370e6ce93bc8aaefc07841fc8b8fe4a5e9d5e2adf4c9acf038c0c6308"
+      },
+      "schema": "capacities"
+    }
+  }
+}

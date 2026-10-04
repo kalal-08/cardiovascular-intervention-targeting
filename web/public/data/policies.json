@@ -1,0 +1,21 @@
+{
+  "schema_name": "policies",
+  "schema_version": "1.0.0",
+  "rows": [
+    {
+      "policy": "grf",
+      "policy_label": "GRF",
+      "scientific_category": "predictive_causal_hte"
+    },
+    {
+      "policy": "simple",
+      "policy_label": "Simple HTE",
+      "scientific_category": "predictive_causal_hte"
+    },
+    {
+      "policy": "baseline_risk",
+      "policy_label": "Baseline risk",
+      "scientific_category": "heuristic"
+    }
+  ]
+}

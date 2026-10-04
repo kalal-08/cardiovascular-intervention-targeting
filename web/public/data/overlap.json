@@ -1,0 +1,141 @@
+{
+  "schema_name": "overlap",
+  "schema_version": "1.0.0",
+  "rows": [
+    {
+      "capacity_villages": 13,
+      "comparison": "grf_vs_baseline_risk",
+      "policy_left": "grf",
+      "policy_right": "baseline_risk",
+      "shared_villages": 7,
+      "jaccard_overlap": 0.3684210526315789,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 32,
+      "comparison": "grf_vs_baseline_risk",
+      "policy_left": "grf",
+      "policy_right": "baseline_risk",
+      "shared_villages": 22,
+      "jaccard_overlap": 0.5238095238095238,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 64,
+      "comparison": "grf_vs_baseline_risk",
+      "policy_left": "grf",
+      "policy_right": "baseline_risk",
+      "shared_villages": 40,
+      "jaccard_overlap": 0.4545454545454545,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 95,
+      "comparison": "grf_vs_baseline_risk",
+      "policy_left": "grf",
+      "policy_right": "baseline_risk",
+      "shared_villages": 79,
+      "jaccard_overlap": 0.7117117117117117,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 127,
+      "comparison": "grf_vs_baseline_risk",
+      "policy_left": "grf",
+      "policy_right": "baseline_risk",
+      "shared_villages": 127,
+      "jaccard_overlap": 1.0,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 13,
+      "comparison": "grf_vs_simple",
+      "policy_left": "grf",
+      "policy_right": "simple",
+      "shared_villages": 3,
+      "jaccard_overlap": 0.1304347826086956,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 32,
+      "comparison": "grf_vs_simple",
+      "policy_left": "grf",
+      "policy_right": "simple",
+      "shared_villages": 18,
+      "jaccard_overlap": 0.391304347826087,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 64,
+      "comparison": "grf_vs_simple",
+      "policy_left": "grf",
+      "policy_right": "simple",
+      "shared_villages": 43,
+      "jaccard_overlap": 0.5058823529411764,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 95,
+      "comparison": "grf_vs_simple",
+      "policy_left": "grf",
+      "policy_right": "simple",
+      "shared_villages": 78,
+      "jaccard_overlap": 0.6964285714285714,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 127,
+      "comparison": "grf_vs_simple",
+      "policy_left": "grf",
+      "policy_right": "simple",
+      "shared_villages": 127,
+      "jaccard_overlap": 1.0,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 13,
+      "comparison": "simple_vs_baseline_risk",
+      "policy_left": "simple",
+      "policy_right": "baseline_risk",
+      "shared_villages": 3,
+      "jaccard_overlap": 0.1304347826086956,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 32,
+      "comparison": "simple_vs_baseline_risk",
+      "policy_left": "simple",
+      "policy_right": "baseline_risk",
+      "shared_villages": 13,
+      "jaccard_overlap": 0.2549019607843137,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 64,
+      "comparison": "simple_vs_baseline_risk",
+      "policy_left": "simple",
+      "policy_right": "baseline_risk",
+      "shared_villages": 38,
+      "jaccard_overlap": 0.4222222222222222,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 95,
+      "comparison": "simple_vs_baseline_risk",
+      "policy_left": "simple",
+      "policy_right": "baseline_risk",
+      "shared_villages": 77,
+      "jaccard_overlap": 0.6814159292035398,
+      "scientific_category": "descriptive"
+    },
+    {
+      "capacity_villages": 127,
+      "comparison": "simple_vs_baseline_risk",
+      "policy_left": "simple",
+      "policy_right": "baseline_risk",
+      "shared_villages": 127,
+      "jaccard_overlap": 1.0,
+      "scientific_category": "descriptive"
+    }
+  ]
+}

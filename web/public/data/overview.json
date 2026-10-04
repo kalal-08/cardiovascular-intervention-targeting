@@ -1,0 +1,27 @@
+{
+  "schema_name": "overview",
+  "schema_version": "1.0.0",
+  "rows": [
+    {
+      "summary_id": "SMARTER_PRIMARY",
+      "randomized_participants": 4533,
+      "evaluation_participants": 4508,
+      "missing_primary_outcome": 25,
+      "villages": 127,
+      "intervention_participants": 2297,
+      "control_participants": 2236,
+      "intervention_villages": 64,
+      "control_villages": 63,
+      "primary_outcome": "Predicted 10-year ASCVD risk",
+      "outcome_unit": "percentage points",
+      "treatment_effect_estimate": -1.8799816659919089,
+      "treatment_effect_ci_lower": -2.564212452967485,
+      "treatment_effect_ci_upper": -1.1957508790163325,
+      "effect_favorable_direction": "lower",
+      "benefit_sign_convention": "positive benefit equals a reduction in predicted ASCVD risk",
+      "analysis_population": "randomized participants with observed primary follow-up outcome",
+      "reproduction_status": "REPRODUCED",
+      "final_policy_conclusion": "NO SINGLE ROBUST POLICY WINNER ESTABLISHED"
+    }
+  ]
+}

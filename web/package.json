@@ -1,0 +1,48 @@
+{
+  "name": "cardiovascular-intervention-web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.16.0",
+    "npm": "11.13.0"
+  },
+  "packageManager": "npm@11.13.0",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --strictPort",
+    "typecheck": "tsc --noEmit",
+    "check": "node --experimental-strip-types scripts/check-foundation.ts",
+    "architecture:check": "node --experimental-strip-types scripts/check-architecture.ts",
+    "overview:check": "node --experimental-strip-types scripts/check-overview.ts",
+    "risk-benefit:check": "node --experimental-strip-types scripts/check-risk-benefit.ts",
+    "hte-validation:check": "node --experimental-strip-types scripts/check-hte-validation.ts",
+    "build": "npm run data:public:validate && npm run typecheck && vite build",
+    "build:local": "npm run data:validate && npm run build",
+    "preview": "vite preview --host 127.0.0.1 --strictPort",
+    "spikes:check": "node --experimental-strip-types scripts/check-spike-state.ts",
+    "spikes:build": "npm run data:validate && npm run typecheck && vite build --mode spikes --outDir dist-spikes",
+    "spikes:preview": "vite preview --host 127.0.0.1 --strictPort --mode spikes --outDir dist-spikes --port 4174",
+    "data:generate": "python -B scripts/export_web_data.py generate",
+    "data:validate": "python -B scripts/export_web_data.py validate",
+    "data:public:validate": "node --experimental-strip-types scripts/validate-public-data.ts",
+    "data:public:check": "node scripts/check-public-data.cjs",
+    "data:build": "npm run data:generate && npm run data:validate",
+    "data:check": "python -B -m unittest discover -s scripts -p test_web_data.py",
+    "data:http": "node scripts/check-data-http.mjs"
+  },
+  "dependencies": {
+    "echarts": "6.1.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.62.4",
+    "@types/node": "24.19.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.2",
+    "wrangler": "4.146.0"
+  }
+}

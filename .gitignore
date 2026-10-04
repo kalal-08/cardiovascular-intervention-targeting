@@ -1,0 +1,90 @@
+# Trial data
+data/raw/**
+data/derived/**
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+
+# R
+renv/library/
+renv/staging/
+.Rproj.user/
+.Rhistory
+.RData
+
+# Local environment
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+
+# Local Power BI cache/binaries and release-audit archives
+.pbi/
+powerbi/**/*.pbix
+powerbi/**/*.abf
+reports/archive/
+reports/audits/
+
+# Private editable Power BI implementation, retained locally
+*.pbix
+*.pbip
+*.pbir
+*.abf
+*.tmdl
+/powerbi/*.Report/
+/powerbi/*.SemanticModel/
+/powerbi/backups/
+/powerbi/data/
+/powerbi/design_reference/
+
+# Internal documentation/history; public documentation is separately curated
+/AGENTS.md
+/PROJECT_CONTEXT.md
+/_brief/
+/docs/*.md
+/data/README.md
+/web/README.md
+/powerbi/README.md
+/powerbi/dashboard_spec.md
+/powerbi/dax_measures.md
+
+# Local generated web outputs and dependencies
+node_modules/
+/web/dist/
+/web/dist-spikes/
+/web/.wrangler/
+
+# Private/local scientific reproduction (public web source is web/src/)
+/data/
+/src/
+/r/
+/tests/
+/output/
+/renv/
+/renv.lock
+/pyproject.toml
+/.Rprofile
+
+# Only the curated Power BI documentation is public source
+/powerbi/*
+!/powerbi/PUBLIC_README.md
+
+# Only final approved reporting outputs are public evidence
+/reports/*
+!/reports/Cardiovascular_Intervention_Targeting_final.pdf
+!/reports/figures/
+/reports/figures/*
+!/reports/figures/powerbi/
+/reports/figures/powerbi/*
+!/reports/figures/powerbi/phase12b_final_20261001/
+
+# OS/editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini

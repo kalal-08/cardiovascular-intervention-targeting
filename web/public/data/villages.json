@@ -1,0 +1,1276 @@
+{
+  "schema_name": "villages",
+  "schema_version": "1.0.0",
+  "rows": [
+    {
+      "village_id": "1",
+      "n_randomized": 35,
+      "baseline_risk": 20.77142857142857,
+      "grf_predicted_benefit": 2.392128003392948,
+      "simple_predicted_benefit": 1.7993569367959572,
+      "grf_candidate_rank": 5,
+      "simple_candidate_rank": 64,
+      "baseline_risk_candidate_rank": 15
+    },
+    {
+      "village_id": "2",
+      "n_randomized": 35,
+      "baseline_risk": 18.26,
+      "grf_predicted_benefit": 1.560966993618354,
+      "simple_predicted_benefit": 1.6611407876829314,
+      "grf_candidate_rank": 105,
+      "simple_candidate_rank": 110,
+      "baseline_risk_candidate_rank": 60
+    },
+    {
+      "village_id": "3",
+      "n_randomized": 35,
+      "baseline_risk": 19.005714285714287,
+      "grf_predicted_benefit": 2.2601765336504944,
+      "simple_predicted_benefit": 1.840270128376737,
+      "grf_candidate_rank": 42,
+      "simple_candidate_rank": 91,
+      "baseline_risk_candidate_rank": 36
+    },
+    {
+      "village_id": "4",
+      "n_randomized": 33,
+      "baseline_risk": 20.75454545454545,
+      "grf_predicted_benefit": 2.265895246097934,
+      "simple_predicted_benefit": 2.44503580183642,
+      "grf_candidate_rank": 32,
+      "simple_candidate_rank": 32,
+      "baseline_risk_candidate_rank": 11
+    },
+    {
+      "village_id": "5",
+      "n_randomized": 35,
+      "baseline_risk": 17.3,
+      "grf_predicted_benefit": 1.6638030080541075,
+      "simple_predicted_benefit": 1.710796600173073,
+      "grf_candidate_rank": 80,
+      "simple_candidate_rank": 63,
+      "baseline_risk_candidate_rank": 75
+    },
+    {
+      "village_id": "6",
+      "n_randomized": 36,
+      "baseline_risk": 21.13888888888889,
+      "grf_predicted_benefit": 2.521873119893451,
+      "simple_predicted_benefit": 2.05590043480691,
+      "grf_candidate_rank": 4,
+      "simple_candidate_rank": 57,
+      "baseline_risk_candidate_rank": 5
+    },
+    {
+      "village_id": "7",
+      "n_randomized": 37,
+      "baseline_risk": 18.61891891891892,
+      "grf_predicted_benefit": 2.0122773303831307,
+      "simple_predicted_benefit": 1.836208584045428,
+      "grf_candidate_rank": 20,
+      "simple_candidate_rank": 49,
+      "baseline_risk_candidate_rank": 39
+    },
+    {
+      "village_id": "8",
+      "n_randomized": 35,
+      "baseline_risk": 21.04,
+      "grf_predicted_benefit": 1.8886650937853056,
+      "simple_predicted_benefit": 1.7554215764425798,
+      "grf_candidate_rank": 30,
+      "simple_candidate_rank": 50,
+      "baseline_risk_candidate_rank": 25
+    },
+    {
+      "village_id": "9",
+      "n_randomized": 35,
+      "baseline_risk": 13.26,
+      "grf_predicted_benefit": 1.902690556413436,
+      "simple_predicted_benefit": 1.7869809118791204,
+      "grf_candidate_rank": 88,
+      "simple_candidate_rank": 84,
+      "baseline_risk_candidate_rank": 124
+    },
+    {
+      "village_id": "10",
+      "n_randomized": 35,
+      "baseline_risk": 13.068571428571428,
+      "grf_predicted_benefit": 1.575193255735026,
+      "simple_predicted_benefit": 1.38094878043383,
+      "grf_candidate_rank": 99,
+      "simple_candidate_rank": 125,
+      "baseline_risk_candidate_rank": 125
+    },
+    {
+      "village_id": "11",
+      "n_randomized": 35,
+      "baseline_risk": 13.914285714285716,
+      "grf_predicted_benefit": 1.7344408870843937,
+      "simple_predicted_benefit": 1.5646842518921833,
+      "grf_candidate_rank": 122,
+      "simple_candidate_rank": 116,
+      "baseline_risk_candidate_rank": 116
+    },
+    {
+      "village_id": "12",
+      "n_randomized": 35,
+      "baseline_risk": 13.194285714285714,
+      "grf_predicted_benefit": 1.7843549305329616,
+      "simple_predicted_benefit": 1.147286600325745,
+      "grf_candidate_rank": 117,
+      "simple_candidate_rank": 126,
+      "baseline_risk_candidate_rank": 127
+    },
+    {
+      "village_id": "13",
+      "n_randomized": 35,
+      "baseline_risk": 16.005714285714287,
+      "grf_predicted_benefit": 2.3150125834744304,
+      "simple_predicted_benefit": 1.4727914999287002,
+      "grf_candidate_rank": 27,
+      "simple_candidate_rank": 122,
+      "baseline_risk_candidate_rank": 117
+    },
+    {
+      "village_id": "14",
+      "n_randomized": 35,
+      "baseline_risk": 17.137142857142855,
+      "grf_predicted_benefit": 1.680747393153542,
+      "simple_predicted_benefit": 1.6540002180923712,
+      "grf_candidate_rank": 119,
+      "simple_candidate_rank": 109,
+      "baseline_risk_candidate_rank": 84
+    },
+    {
+      "village_id": "15",
+      "n_randomized": 36,
+      "baseline_risk": 17.141666666666666,
+      "grf_predicted_benefit": 2.0136399210457108,
+      "simple_predicted_benefit": 1.7211484473562195,
+      "grf_candidate_rank": 44,
+      "simple_candidate_rank": 99,
+      "baseline_risk_candidate_rank": 79
+    },
+    {
+      "village_id": "16",
+      "n_randomized": 38,
+      "baseline_risk": 21.56052631578948,
+      "grf_predicted_benefit": 2.273866789073539,
+      "simple_predicted_benefit": 2.1627404243536565,
+      "grf_candidate_rank": 10,
+      "simple_candidate_rank": 9,
+      "baseline_risk_candidate_rank": 10
+    },
+    {
+      "village_id": "17",
+      "n_randomized": 36,
+      "baseline_risk": 18.86388888888889,
+      "grf_predicted_benefit": 1.4831615614445426,
+      "simple_predicted_benefit": 1.7433108341427452,
+      "grf_candidate_rank": 125,
+      "simple_candidate_rank": 89,
+      "baseline_risk_candidate_rank": 35
+    },
+    {
+      "village_id": "18",
+      "n_randomized": 36,
+      "baseline_risk": 18.266666666666666,
+      "grf_predicted_benefit": 1.912378598794952,
+      "simple_predicted_benefit": 1.7865600086778803,
+      "grf_candidate_rank": 86,
+      "simple_candidate_rank": 51,
+      "baseline_risk_candidate_rank": 46
+    },
+    {
+      "village_id": "19",
+      "n_randomized": 35,
+      "baseline_risk": 20.02857142857143,
+      "grf_predicted_benefit": 1.9709570242777543,
+      "simple_predicted_benefit": 1.8620906742947247,
+      "grf_candidate_rank": 25,
+      "simple_candidate_rank": 20,
+      "baseline_risk_candidate_rank": 30
+    },
+    {
+      "village_id": "20",
+      "n_randomized": 35,
+      "baseline_risk": 18.985714285714284,
+      "grf_predicted_benefit": 1.7199028583030966,
+      "simple_predicted_benefit": 1.9651864784477648,
+      "grf_candidate_rank": 115,
+      "simple_candidate_rank": 59,
+      "baseline_risk_candidate_rank": 58
+    },
+    {
+      "village_id": "21",
+      "n_randomized": 35,
+      "baseline_risk": 17.87142857142857,
+      "grf_predicted_benefit": 1.815845631583435,
+      "simple_predicted_benefit": 1.7343005431149323,
+      "grf_candidate_rank": 48,
+      "simple_candidate_rank": 55,
+      "baseline_risk_candidate_rank": 54
+    },
+    {
+      "village_id": "22",
+      "n_randomized": 35,
+      "baseline_risk": 19.602857142857143,
+      "grf_predicted_benefit": 2.501316953577922,
+      "simple_predicted_benefit": 2.068044239444665,
+      "grf_candidate_rank": 6,
+      "simple_candidate_rank": 27,
+      "baseline_risk_candidate_rank": 22
+    },
+    {
+      "village_id": "23",
+      "n_randomized": 36,
+      "baseline_risk": 19.744444444444444,
+      "grf_predicted_benefit": 1.723369986702207,
+      "simple_predicted_benefit": 1.5230502225683655,
+      "grf_candidate_rank": 102,
+      "simple_candidate_rank": 117,
+      "baseline_risk_candidate_rank": 16
+    },
+    {
+      "village_id": "24",
+      "n_randomized": 36,
+      "baseline_risk": 19.27777777777778,
+      "grf_predicted_benefit": 2.004465934622336,
+      "simple_predicted_benefit": 2.0500900030371314,
+      "grf_candidate_rank": 58,
+      "simple_candidate_rank": 38,
+      "baseline_risk_candidate_rank": 43
+    },
+    {
+      "village_id": "25",
+      "n_randomized": 35,
+      "baseline_risk": 19.55142857142857,
+      "grf_predicted_benefit": 1.9123693848991985,
+      "simple_predicted_benefit": 1.7101595935001703,
+      "grf_candidate_rank": 91,
+      "simple_candidate_rank": 77,
+      "baseline_risk_candidate_rank": 27
+    },
+    {
+      "village_id": "26",
+      "n_randomized": 37,
+      "baseline_risk": 19.145945945945947,
+      "grf_predicted_benefit": 2.0127216221043,
+      "simple_predicted_benefit": 1.7794391044348776,
+      "grf_candidate_rank": 49,
+      "simple_candidate_rank": 90,
+      "baseline_risk_candidate_rank": 55
+    },
+    {
+      "village_id": "27",
+      "n_randomized": 35,
+      "baseline_risk": 19.15428571428572,
+      "grf_predicted_benefit": 1.9082374318022293,
+      "simple_predicted_benefit": 2.139234883580067,
+      "grf_candidate_rank": 85,
+      "simple_candidate_rank": 24,
+      "baseline_risk_candidate_rank": 50
+    },
+    {
+      "village_id": "28",
+      "n_randomized": 36,
+      "baseline_risk": 20.016666666666666,
+      "grf_predicted_benefit": 2.0014928758400945,
+      "simple_predicted_benefit": 2.408423398440949,
+      "grf_candidate_rank": 82,
+      "simple_candidate_rank": 36,
+      "baseline_risk_candidate_rank": 21
+    },
+    {
+      "village_id": "29",
+      "n_randomized": 35,
+      "baseline_risk": 19.39428571428571,
+      "grf_predicted_benefit": 1.8553492044950148,
+      "simple_predicted_benefit": 1.8082534935040573,
+      "grf_candidate_rank": 38,
+      "simple_candidate_rank": 33,
+      "baseline_risk_candidate_rank": 33
+    },
+    {
+      "village_id": "30",
+      "n_randomized": 35,
+      "baseline_risk": 20.17428571428572,
+      "grf_predicted_benefit": 1.9138560599991328,
+      "simple_predicted_benefit": 2.007591899914164,
+      "grf_candidate_rank": 78,
+      "simple_candidate_rank": 48,
+      "baseline_risk_candidate_rank": 13
+    },
+    {
+      "village_id": "31",
+      "n_randomized": 35,
+      "baseline_risk": 22.1,
+      "grf_predicted_benefit": 2.2406706204620708,
+      "simple_predicted_benefit": 1.849127863631856,
+      "grf_candidate_rank": 9,
+      "simple_candidate_rank": 25,
+      "baseline_risk_candidate_rank": 9
+    },
+    {
+      "village_id": "32",
+      "n_randomized": 35,
+      "baseline_risk": 20.27142857142857,
+      "grf_predicted_benefit": 1.958743480728328,
+      "simple_predicted_benefit": 1.7881494100370454,
+      "grf_candidate_rank": 28,
+      "simple_candidate_rank": 73,
+      "baseline_risk_candidate_rank": 18
+    },
+    {
+      "village_id": "33",
+      "n_randomized": 35,
+      "baseline_risk": 21.805714285714288,
+      "grf_predicted_benefit": 2.2458002501999985,
+      "simple_predicted_benefit": 2.710758154602103,
+      "grf_candidate_rank": 24,
+      "simple_candidate_rank": 1,
+      "baseline_risk_candidate_rank": 2
+    },
+    {
+      "village_id": "34",
+      "n_randomized": 35,
+      "baseline_risk": 20.13142857142857,
+      "grf_predicted_benefit": 1.970976786240117,
+      "simple_predicted_benefit": 1.8403850602014065,
+      "grf_candidate_rank": 65,
+      "simple_candidate_rank": 75,
+      "baseline_risk_candidate_rank": 24
+    },
+    {
+      "village_id": "35",
+      "n_randomized": 35,
+      "baseline_risk": 18.17428571428572,
+      "grf_predicted_benefit": 1.6936224069405703,
+      "simple_predicted_benefit": 1.7263296793001073,
+      "grf_candidate_rank": 73,
+      "simple_candidate_rank": 98,
+      "baseline_risk_candidate_rank": 63
+    },
+    {
+      "village_id": "36",
+      "n_randomized": 35,
+      "baseline_risk": 17.24857142857143,
+      "grf_predicted_benefit": 2.045237726453532,
+      "simple_predicted_benefit": 2.160203776790811,
+      "grf_candidate_rank": 76,
+      "simple_candidate_rank": 46,
+      "baseline_risk_candidate_rank": 71
+    },
+    {
+      "village_id": "37",
+      "n_randomized": 36,
+      "baseline_risk": 18.25,
+      "grf_predicted_benefit": 1.7202941387624429,
+      "simple_predicted_benefit": 1.529330929825121,
+      "grf_candidate_rank": 70,
+      "simple_candidate_rank": 100,
+      "baseline_risk_candidate_rank": 49
+    },
+    {
+      "village_id": "38",
+      "n_randomized": 35,
+      "baseline_risk": 15.002857142857144,
+      "grf_predicted_benefit": 1.5855431166997394,
+      "simple_predicted_benefit": 1.6821465147483137,
+      "grf_candidate_rank": 98,
+      "simple_candidate_rank": 69,
+      "baseline_risk_candidate_rank": 114
+    },
+    {
+      "village_id": "39",
+      "n_randomized": 35,
+      "baseline_risk": 19.525714285714287,
+      "grf_predicted_benefit": 2.099485203030784,
+      "simple_predicted_benefit": 1.9697403354311247,
+      "grf_candidate_rank": 13,
+      "simple_candidate_rank": 18,
+      "baseline_risk_candidate_rank": 23
+    },
+    {
+      "village_id": "40",
+      "n_randomized": 35,
+      "baseline_risk": 18.205714285714286,
+      "grf_predicted_benefit": 2.131363968027814,
+      "simple_predicted_benefit": 1.9149596832682447,
+      "grf_candidate_rank": 57,
+      "simple_candidate_rank": 81,
+      "baseline_risk_candidate_rank": 47
+    },
+    {
+      "village_id": "41",
+      "n_randomized": 35,
+      "baseline_risk": 20.91142857142857,
+      "grf_predicted_benefit": 2.358626403796155,
+      "simple_predicted_benefit": 2.243708311536506,
+      "grf_candidate_rank": 12,
+      "simple_candidate_rank": 41,
+      "baseline_risk_candidate_rank": 6
+    },
+    {
+      "village_id": "42",
+      "n_randomized": 35,
+      "baseline_risk": 19.185714285714287,
+      "grf_predicted_benefit": 2.2811358979094787,
+      "simple_predicted_benefit": 2.452462097192407,
+      "grf_candidate_rank": 21,
+      "simple_candidate_rank": 26,
+      "baseline_risk_candidate_rank": 26
+    },
+    {
+      "village_id": "43",
+      "n_randomized": 35,
+      "baseline_risk": 16.78857142857143,
+      "grf_predicted_benefit": 1.6296883442109733,
+      "simple_predicted_benefit": 1.6466930755372935,
+      "grf_candidate_rank": 84,
+      "simple_candidate_rank": 113,
+      "baseline_risk_candidate_rank": 88
+    },
+    {
+      "village_id": "44",
+      "n_randomized": 35,
+      "baseline_risk": 17.534285714285716,
+      "grf_predicted_benefit": 1.8016688695128216,
+      "simple_predicted_benefit": 1.8550114436779503,
+      "grf_candidate_rank": 54,
+      "simple_candidate_rank": 34,
+      "baseline_risk_candidate_rank": 73
+    },
+    {
+      "village_id": "45",
+      "n_randomized": 35,
+      "baseline_risk": 20.268571428571427,
+      "grf_predicted_benefit": 2.128860096750899,
+      "simple_predicted_benefit": 2.5111203822857378,
+      "grf_candidate_rank": 62,
+      "simple_candidate_rank": 22,
+      "baseline_risk_candidate_rank": 17
+    },
+    {
+      "village_id": "46",
+      "n_randomized": 35,
+      "baseline_risk": 15.262857142857143,
+      "grf_predicted_benefit": 2.314588305595405,
+      "simple_predicted_benefit": 1.6063598406817448,
+      "grf_candidate_rank": 31,
+      "simple_candidate_rank": 106,
+      "baseline_risk_candidate_rank": 126
+    },
+    {
+      "village_id": "47",
+      "n_randomized": 35,
+      "baseline_risk": 22.808571428571423,
+      "grf_predicted_benefit": 2.393790332843457,
+      "simple_predicted_benefit": 2.2448432865298384,
+      "grf_candidate_rank": 2,
+      "simple_candidate_rank": 3,
+      "baseline_risk_candidate_rank": 3
+    },
+    {
+      "village_id": "48",
+      "n_randomized": 38,
+      "baseline_risk": 17.692105263157895,
+      "grf_predicted_benefit": 1.6483367134260645,
+      "simple_predicted_benefit": 2.121389050534746,
+      "grf_candidate_rank": 83,
+      "simple_candidate_rank": 8,
+      "baseline_risk_candidate_rank": 69
+    },
+    {
+      "village_id": "49",
+      "n_randomized": 39,
+      "baseline_risk": 19.07435897435897,
+      "grf_predicted_benefit": 2.359225314798969,
+      "simple_predicted_benefit": 2.957437689481104,
+      "grf_candidate_rank": 7,
+      "simple_candidate_rank": 6,
+      "baseline_risk_candidate_rank": 31
+    },
+    {
+      "village_id": "50",
+      "n_randomized": 33,
+      "baseline_risk": 17.551515151515154,
+      "grf_predicted_benefit": 2.305073810576033,
+      "simple_predicted_benefit": 2.264696891082316,
+      "grf_candidate_rank": 37,
+      "simple_candidate_rank": 7,
+      "baseline_risk_candidate_rank": 66
+    },
+    {
+      "village_id": "51",
+      "n_randomized": 31,
+      "baseline_risk": 15.99032258064516,
+      "grf_predicted_benefit": 2.285949288824845,
+      "simple_predicted_benefit": 2.679718632178075,
+      "grf_candidate_rank": 17,
+      "simple_candidate_rank": 16,
+      "baseline_risk_candidate_rank": 97
+    },
+    {
+      "village_id": "52",
+      "n_randomized": 33,
+      "baseline_risk": 19.73333333333333,
+      "grf_predicted_benefit": 1.8712809687849847,
+      "simple_predicted_benefit": 2.10765167872915,
+      "grf_candidate_rank": 100,
+      "simple_candidate_rank": 35,
+      "baseline_risk_candidate_rank": 29
+    },
+    {
+      "village_id": "53",
+      "n_randomized": 33,
+      "baseline_risk": 16.024242424242424,
+      "grf_predicted_benefit": 1.9452005009625803,
+      "simple_predicted_benefit": 1.9143322484511067,
+      "grf_candidate_rank": 34,
+      "simple_candidate_rank": 30,
+      "baseline_risk_candidate_rank": 115
+    },
+    {
+      "village_id": "54",
+      "n_randomized": 37,
+      "baseline_risk": 20.164864864864864,
+      "grf_predicted_benefit": 2.5452633681832,
+      "simple_predicted_benefit": 1.8293484971658784,
+      "grf_candidate_rank": 8,
+      "simple_candidate_rank": 78,
+      "baseline_risk_candidate_rank": 20
+    },
+    {
+      "village_id": "55",
+      "n_randomized": 35,
+      "baseline_risk": 20.254285714285714,
+      "grf_predicted_benefit": 2.512109762198655,
+      "simple_predicted_benefit": 1.8010531955978435,
+      "grf_candidate_rank": 3,
+      "simple_candidate_rank": 47,
+      "baseline_risk_candidate_rank": 4
+    },
+    {
+      "village_id": "56",
+      "n_randomized": 35,
+      "baseline_risk": 16.257142857142856,
+      "grf_predicted_benefit": 1.8761472432118216,
+      "simple_predicted_benefit": 1.410807695348111,
+      "grf_candidate_rank": 107,
+      "simple_candidate_rank": 121,
+      "baseline_risk_candidate_rank": 87
+    },
+    {
+      "village_id": "57",
+      "n_randomized": 36,
+      "baseline_risk": 18.93611111111112,
+      "grf_predicted_benefit": 2.015703983647852,
+      "simple_predicted_benefit": 1.5758127547092096,
+      "grf_candidate_rank": 39,
+      "simple_candidate_rank": 118,
+      "baseline_risk_candidate_rank": 64
+    },
+    {
+      "village_id": "58",
+      "n_randomized": 37,
+      "baseline_risk": 21.272972972972973,
+      "grf_predicted_benefit": 2.029348757061109,
+      "simple_predicted_benefit": 1.8333169226288395,
+      "grf_candidate_rank": 18,
+      "simple_candidate_rank": 29,
+      "baseline_risk_candidate_rank": 19
+    },
+    {
+      "village_id": "59",
+      "n_randomized": 40,
+      "baseline_risk": 21.595,
+      "grf_predicted_benefit": 2.104090007427458,
+      "simple_predicted_benefit": 1.7683270162247389,
+      "grf_candidate_rank": 15,
+      "simple_candidate_rank": 44,
+      "baseline_risk_candidate_rank": 14
+    },
+    {
+      "village_id": "60",
+      "n_randomized": 36,
+      "baseline_risk": 19.944444444444443,
+      "grf_predicted_benefit": 2.0510802285416525,
+      "simple_predicted_benefit": 1.7146320398021009,
+      "grf_candidate_rank": 66,
+      "simple_candidate_rank": 71,
+      "baseline_risk_candidate_rank": 7
+    },
+    {
+      "village_id": "61",
+      "n_randomized": 38,
+      "baseline_risk": 19.91842105263158,
+      "grf_predicted_benefit": 2.173942699743728,
+      "simple_predicted_benefit": 1.835810286590784,
+      "grf_candidate_rank": 52,
+      "simple_candidate_rank": 42,
+      "baseline_risk_candidate_rank": 12
+    },
+    {
+      "village_id": "62",
+      "n_randomized": 39,
+      "baseline_risk": 19.32307692307692,
+      "grf_predicted_benefit": 2.3267671183259138,
+      "simple_predicted_benefit": 1.6963621711689625,
+      "grf_candidate_rank": 22,
+      "simple_candidate_rank": 92,
+      "baseline_risk_candidate_rank": 32
+    },
+    {
+      "village_id": "63",
+      "n_randomized": 39,
+      "baseline_risk": 17.035897435897436,
+      "grf_predicted_benefit": 1.865831535607004,
+      "simple_predicted_benefit": 1.8021897626622017,
+      "grf_candidate_rank": 50,
+      "simple_candidate_rank": 60,
+      "baseline_risk_candidate_rank": 85
+    },
+    {
+      "village_id": "64",
+      "n_randomized": 36,
+      "baseline_risk": 16.61111111111111,
+      "grf_predicted_benefit": 1.5253917334719016,
+      "simple_predicted_benefit": 1.7546947227486305,
+      "grf_candidate_rank": 113,
+      "simple_candidate_rank": 83,
+      "baseline_risk_candidate_rank": 93
+    },
+    {
+      "village_id": "65",
+      "n_randomized": 41,
+      "baseline_risk": 18.51219512195122,
+      "grf_predicted_benefit": 1.516643146491547,
+      "simple_predicted_benefit": 1.854977301327692,
+      "grf_candidate_rank": 118,
+      "simple_candidate_rank": 39,
+      "baseline_risk_candidate_rank": 44
+    },
+    {
+      "village_id": "66",
+      "n_randomized": 45,
+      "baseline_risk": 21.07777777777778,
+      "grf_predicted_benefit": 2.8234715040437943,
+      "simple_predicted_benefit": 1.9892385042061227,
+      "grf_candidate_rank": 1,
+      "simple_candidate_rank": 53,
+      "baseline_risk_candidate_rank": 8
+    },
+    {
+      "village_id": "67",
+      "n_randomized": 36,
+      "baseline_risk": 17.797222222222224,
+      "grf_predicted_benefit": 1.7645304948414415,
+      "simple_predicted_benefit": 1.422397947939177,
+      "grf_candidate_rank": 59,
+      "simple_candidate_rank": 114,
+      "baseline_risk_candidate_rank": 65
+    },
+    {
+      "village_id": "68",
+      "n_randomized": 38,
+      "baseline_risk": 14.578947368421051,
+      "grf_predicted_benefit": 1.7851279624951553,
+      "simple_predicted_benefit": 1.8390978830366047,
+      "grf_candidate_rank": 60,
+      "simple_candidate_rank": 45,
+      "baseline_risk_candidate_rank": 120
+    },
+    {
+      "village_id": "69",
+      "n_randomized": 36,
+      "baseline_risk": 16.552777777777777,
+      "grf_predicted_benefit": 1.942268108880064,
+      "simple_predicted_benefit": 1.9938891347462808,
+      "grf_candidate_rank": 40,
+      "simple_candidate_rank": 15,
+      "baseline_risk_candidate_rank": 103
+    },
+    {
+      "village_id": "70",
+      "n_randomized": 38,
+      "baseline_risk": 16.273684210526316,
+      "grf_predicted_benefit": 2.033658135814652,
+      "simple_predicted_benefit": 2.3466562662992576,
+      "grf_candidate_rank": 35,
+      "simple_candidate_rank": 10,
+      "baseline_risk_candidate_rank": 100
+    },
+    {
+      "village_id": "71",
+      "n_randomized": 35,
+      "baseline_risk": 18.062857142857144,
+      "grf_predicted_benefit": 1.6985058924931298,
+      "simple_predicted_benefit": 2.308187955246654,
+      "grf_candidate_rank": 106,
+      "simple_candidate_rank": 2,
+      "baseline_risk_candidate_rank": 56
+    },
+    {
+      "village_id": "72",
+      "n_randomized": 37,
+      "baseline_risk": 16.197297297297297,
+      "grf_predicted_benefit": 2.129635554478314,
+      "simple_predicted_benefit": 2.1808179762032047,
+      "grf_candidate_rank": 56,
+      "simple_candidate_rank": 21,
+      "baseline_risk_candidate_rank": 106
+    },
+    {
+      "village_id": "73",
+      "n_randomized": 38,
+      "baseline_risk": 16.968421052631577,
+      "grf_predicted_benefit": 1.7810177024569869,
+      "simple_predicted_benefit": 2.233129387972096,
+      "grf_candidate_rank": 97,
+      "simple_candidate_rank": 17,
+      "baseline_risk_candidate_rank": 77
+    },
+    {
+      "village_id": "74",
+      "n_randomized": 35,
+      "baseline_risk": 15.905714285714287,
+      "grf_predicted_benefit": 1.4494416390303426,
+      "simple_predicted_benefit": 1.7745976112583806,
+      "grf_candidate_rank": 120,
+      "simple_candidate_rank": 40,
+      "baseline_risk_candidate_rank": 104
+    },
+    {
+      "village_id": "75",
+      "n_randomized": 38,
+      "baseline_risk": 18.18947368421053,
+      "grf_predicted_benefit": 2.2014479527109008,
+      "simple_predicted_benefit": 3.277487751840805,
+      "grf_candidate_rank": 47,
+      "simple_candidate_rank": 5,
+      "baseline_risk_candidate_rank": 52
+    },
+    {
+      "village_id": "76",
+      "n_randomized": 40,
+      "baseline_risk": 16.85,
+      "grf_predicted_benefit": 1.863993303026254,
+      "simple_predicted_benefit": 1.9339398160050976,
+      "grf_candidate_rank": 33,
+      "simple_candidate_rank": 13,
+      "baseline_risk_candidate_rank": 83
+    },
+    {
+      "village_id": "77",
+      "n_randomized": 40,
+      "baseline_risk": 15.435,
+      "grf_predicted_benefit": 2.0713698358434547,
+      "simple_predicted_benefit": 2.72454582893104,
+      "grf_candidate_rank": 72,
+      "simple_candidate_rank": 12,
+      "baseline_risk_candidate_rank": 107
+    },
+    {
+      "village_id": "78",
+      "n_randomized": 35,
+      "baseline_risk": 16.814285714285713,
+      "grf_predicted_benefit": 1.9147217786552784,
+      "simple_predicted_benefit": 1.749532358535787,
+      "grf_candidate_rank": 81,
+      "simple_candidate_rank": 56,
+      "baseline_risk_candidate_rank": 86
+    },
+    {
+      "village_id": "79",
+      "n_randomized": 32,
+      "baseline_risk": 16.60625,
+      "grf_predicted_benefit": 2.411286815675243,
+      "simple_predicted_benefit": 2.240474711212256,
+      "grf_candidate_rank": 16,
+      "simple_candidate_rank": 11,
+      "baseline_risk_candidate_rank": 96
+    },
+    {
+      "village_id": "80",
+      "n_randomized": 35,
+      "baseline_risk": 16.457142857142856,
+      "grf_predicted_benefit": 2.265635171403816,
+      "simple_predicted_benefit": 1.3956716069012345,
+      "grf_candidate_rank": 46,
+      "simple_candidate_rank": 127,
+      "baseline_risk_candidate_rank": 102
+    },
+    {
+      "village_id": "81",
+      "n_randomized": 34,
+      "baseline_risk": 17.155882352941177,
+      "grf_predicted_benefit": 2.086110886060577,
+      "simple_predicted_benefit": 1.705744923962371,
+      "grf_candidate_rank": 61,
+      "simple_candidate_rank": 82,
+      "baseline_risk_candidate_rank": 72
+    },
+    {
+      "village_id": "82",
+      "n_randomized": 34,
+      "baseline_risk": 18.28529411764706,
+      "grf_predicted_benefit": 1.949816867281993,
+      "simple_predicted_benefit": 1.6242774836876743,
+      "grf_candidate_rank": 71,
+      "simple_candidate_rank": 101,
+      "baseline_risk_candidate_rank": 41
+    },
+    {
+      "village_id": "83",
+      "n_randomized": 34,
+      "baseline_risk": 16.63529411764706,
+      "grf_predicted_benefit": 1.6269311899914085,
+      "simple_predicted_benefit": 1.7278844828436333,
+      "grf_candidate_rank": 90,
+      "simple_candidate_rank": 58,
+      "baseline_risk_candidate_rank": 89
+    },
+    {
+      "village_id": "84",
+      "n_randomized": 35,
+      "baseline_risk": 17.814285714285713,
+      "grf_predicted_benefit": 1.7945983258629168,
+      "simple_predicted_benefit": 1.6661741439012503,
+      "grf_candidate_rank": 55,
+      "simple_candidate_rank": 80,
+      "baseline_risk_candidate_rank": 59
+    },
+    {
+      "village_id": "85",
+      "n_randomized": 35,
+      "baseline_risk": 16.822857142857142,
+      "grf_predicted_benefit": 2.420513328418349,
+      "simple_predicted_benefit": 1.996170292424164,
+      "grf_candidate_rank": 11,
+      "simple_candidate_rank": 31,
+      "baseline_risk_candidate_rank": 81
+    },
+    {
+      "village_id": "86",
+      "n_randomized": 35,
+      "baseline_risk": 16.065714285714286,
+      "grf_predicted_benefit": 1.6268031165179129,
+      "simple_predicted_benefit": 1.6201318325187817,
+      "grf_candidate_rank": 94,
+      "simple_candidate_rank": 85,
+      "baseline_risk_candidate_rank": 99
+    },
+    {
+      "village_id": "87",
+      "n_randomized": 35,
+      "baseline_risk": 16.16857142857143,
+      "grf_predicted_benefit": 1.4432807848895708,
+      "simple_predicted_benefit": 1.397760417623766,
+      "grf_candidate_rank": 124,
+      "simple_candidate_rank": 119,
+      "baseline_risk_candidate_rank": 94
+    },
+    {
+      "village_id": "88",
+      "n_randomized": 37,
+      "baseline_risk": 14.905405405405403,
+      "grf_predicted_benefit": 1.706664191235041,
+      "simple_predicted_benefit": 1.7135784651130144,
+      "grf_candidate_rank": 126,
+      "simple_candidate_rank": 107,
+      "baseline_risk_candidate_rank": 111
+    },
+    {
+      "village_id": "89",
+      "n_randomized": 37,
+      "baseline_risk": 14.897297297297298,
+      "grf_predicted_benefit": 1.5505355401354466,
+      "simple_predicted_benefit": 1.225471739304401,
+      "grf_candidate_rank": 103,
+      "simple_candidate_rank": 124,
+      "baseline_risk_candidate_rank": 118
+    },
+    {
+      "village_id": "90",
+      "n_randomized": 37,
+      "baseline_risk": 17.232432432432432,
+      "grf_predicted_benefit": 2.0485165718721503,
+      "simple_predicted_benefit": 2.3079819335407583,
+      "grf_candidate_rank": 29,
+      "simple_candidate_rank": 14,
+      "baseline_risk_candidate_rank": 74
+    },
+    {
+      "village_id": "91",
+      "n_randomized": 35,
+      "baseline_risk": 16.194285714285712,
+      "grf_predicted_benefit": 1.7548643111315037,
+      "simple_predicted_benefit": 2.200728436576281,
+      "grf_candidate_rank": 63,
+      "simple_candidate_rank": 4,
+      "baseline_risk_candidate_rank": 110
+    },
+    {
+      "village_id": "92",
+      "n_randomized": 36,
+      "baseline_risk": 15.805555555555555,
+      "grf_predicted_benefit": 1.8782867894082025,
+      "simple_predicted_benefit": 2.022152494468644,
+      "grf_candidate_rank": 101,
+      "simple_candidate_rank": 72,
+      "baseline_risk_candidate_rank": 101
+    },
+    {
+      "village_id": "93",
+      "n_randomized": 36,
+      "baseline_risk": 17.22222222222222,
+      "grf_predicted_benefit": 1.8283020634768063,
+      "simple_predicted_benefit": 1.5607521227181451,
+      "grf_candidate_rank": 43,
+      "simple_candidate_rank": 88,
+      "baseline_risk_candidate_rank": 78
+    },
+    {
+      "village_id": "94",
+      "n_randomized": 38,
+      "baseline_risk": 17.607894736842105,
+      "grf_predicted_benefit": 2.1493684866827287,
+      "simple_predicted_benefit": 2.04004988670646,
+      "grf_candidate_rank": 51,
+      "simple_candidate_rank": 61,
+      "baseline_risk_candidate_rank": 61
+    },
+    {
+      "village_id": "95",
+      "n_randomized": 38,
+      "baseline_risk": 15.842105263157896,
+      "grf_predicted_benefit": 1.5054722840336,
+      "simple_predicted_benefit": 1.5521395072358406,
+      "grf_candidate_rank": 114,
+      "simple_candidate_rank": 95,
+      "baseline_risk_candidate_rank": 109
+    },
+    {
+      "village_id": "96",
+      "n_randomized": 37,
+      "baseline_risk": 16.975675675675678,
+      "grf_predicted_benefit": 1.9594968137398443,
+      "simple_predicted_benefit": 1.770287732078205,
+      "grf_candidate_rank": 69,
+      "simple_candidate_rank": 94,
+      "baseline_risk_candidate_rank": 90
+    },
+    {
+      "village_id": "97",
+      "n_randomized": 38,
+      "baseline_risk": 18.292105263157897,
+      "grf_predicted_benefit": 2.269093061926605,
+      "simple_predicted_benefit": 1.7884051388725914,
+      "grf_candidate_rank": 26,
+      "simple_candidate_rank": 102,
+      "baseline_risk_candidate_rank": 42
+    },
+    {
+      "village_id": "98",
+      "n_randomized": 36,
+      "baseline_risk": 18.819444444444443,
+      "grf_predicted_benefit": 1.7616966304566106,
+      "simple_predicted_benefit": 1.6821033957193274,
+      "grf_candidate_rank": 64,
+      "simple_candidate_rank": 74,
+      "baseline_risk_candidate_rank": 45
+    },
+    {
+      "village_id": "99",
+      "n_randomized": 35,
+      "baseline_risk": 18.47142857142857,
+      "grf_predicted_benefit": 1.6069784486737404,
+      "simple_predicted_benefit": 1.7429585152350506,
+      "grf_candidate_rank": 89,
+      "simple_candidate_rank": 93,
+      "baseline_risk_candidate_rank": 48
+    },
+    {
+      "village_id": "100",
+      "n_randomized": 35,
+      "baseline_risk": 19.068571428571428,
+      "grf_predicted_benefit": 1.667254390815072,
+      "simple_predicted_benefit": 1.7727960245708576,
+      "grf_candidate_rank": 79,
+      "simple_candidate_rank": 79,
+      "baseline_risk_candidate_rank": 28
+    },
+    {
+      "village_id": "101",
+      "n_randomized": 35,
+      "baseline_risk": 15.3,
+      "grf_predicted_benefit": 1.840110058660142,
+      "simple_predicted_benefit": 1.6590541998495034,
+      "grf_candidate_rank": 104,
+      "simple_candidate_rank": 103,
+      "baseline_risk_candidate_rank": 119
+    },
+    {
+      "village_id": "102",
+      "n_randomized": 35,
+      "baseline_risk": 19.045714285714286,
+      "grf_predicted_benefit": 1.916865506697947,
+      "simple_predicted_benefit": 1.7245458061185837,
+      "grf_candidate_rank": 77,
+      "simple_candidate_rank": 66,
+      "baseline_risk_candidate_rank": 37
+    },
+    {
+      "village_id": "103",
+      "n_randomized": 34,
+      "baseline_risk": 16.573529411764707,
+      "grf_predicted_benefit": 1.5356994523733716,
+      "simple_predicted_benefit": 1.5984950051238984,
+      "grf_candidate_rank": 110,
+      "simple_candidate_rank": 120,
+      "baseline_risk_candidate_rank": 98
+    },
+    {
+      "village_id": "104",
+      "n_randomized": 35,
+      "baseline_risk": 19.591428571428573,
+      "grf_predicted_benefit": 2.3483748289759183,
+      "simple_predicted_benefit": 2.111445868543444,
+      "grf_candidate_rank": 14,
+      "simple_candidate_rank": 28,
+      "baseline_risk_candidate_rank": 38
+    },
+    {
+      "village_id": "105",
+      "n_randomized": 35,
+      "baseline_risk": 17.34,
+      "grf_predicted_benefit": 2.007070215797706,
+      "simple_predicted_benefit": 1.9058362860214928,
+      "grf_candidate_rank": 53,
+      "simple_candidate_rank": 68,
+      "baseline_risk_candidate_rank": 68
+    },
+    {
+      "village_id": "106",
+      "n_randomized": 36,
+      "baseline_risk": 23.30555555555556,
+      "grf_predicted_benefit": 2.003035919863587,
+      "simple_predicted_benefit": 1.946841920061836,
+      "grf_candidate_rank": 23,
+      "simple_candidate_rank": 23,
+      "baseline_risk_candidate_rank": 1
+    },
+    {
+      "village_id": "107",
+      "n_randomized": 35,
+      "baseline_risk": 16.634285714285717,
+      "grf_predicted_benefit": 1.9525838055915328,
+      "simple_predicted_benefit": 1.6101436755623588,
+      "grf_candidate_rank": 74,
+      "simple_candidate_rank": 115,
+      "baseline_risk_candidate_rank": 95
+    },
+    {
+      "village_id": "108",
+      "n_randomized": 35,
+      "baseline_risk": 16.16,
+      "grf_predicted_benefit": 2.1040349989784928,
+      "simple_predicted_benefit": 1.6077144850152594,
+      "grf_candidate_rank": 67,
+      "simple_candidate_rank": 112,
+      "baseline_risk_candidate_rank": 92
+    },
+    {
+      "village_id": "109",
+      "n_randomized": 35,
+      "baseline_risk": 19.685714285714287,
+      "grf_predicted_benefit": 2.29143481677187,
+      "simple_predicted_benefit": 2.20275788990341,
+      "grf_candidate_rank": 19,
+      "simple_candidate_rank": 19,
+      "baseline_risk_candidate_rank": 34
+    },
+    {
+      "village_id": "110",
+      "n_randomized": 35,
+      "baseline_risk": 17.64857142857143,
+      "grf_predicted_benefit": 1.8869047244191768,
+      "simple_predicted_benefit": 2.126924727897453,
+      "grf_candidate_rank": 96,
+      "simple_candidate_rank": 52,
+      "baseline_risk_candidate_rank": 57
+    },
+    {
+      "village_id": "111",
+      "n_randomized": 35,
+      "baseline_risk": 15.85142857142857,
+      "grf_predicted_benefit": 1.681398444279654,
+      "simple_predicted_benefit": 1.524959516755947,
+      "grf_candidate_rank": 111,
+      "simple_candidate_rank": 111,
+      "baseline_risk_candidate_rank": 122
+    },
+    {
+      "village_id": "112",
+      "n_randomized": 35,
+      "baseline_risk": 18.25142857142857,
+      "grf_predicted_benefit": 2.280969357679074,
+      "simple_predicted_benefit": 1.6252565813692017,
+      "grf_candidate_rank": 41,
+      "simple_candidate_rank": 96,
+      "baseline_risk_candidate_rank": 51
+    },
+    {
+      "village_id": "113",
+      "n_randomized": 35,
+      "baseline_risk": 17.405714285714286,
+      "grf_predicted_benefit": 1.809583017846652,
+      "simple_predicted_benefit": 1.884751561635758,
+      "grf_candidate_rank": 112,
+      "simple_candidate_rank": 87,
+      "baseline_risk_candidate_rank": 67
+    },
+    {
+      "village_id": "114",
+      "n_randomized": 35,
+      "baseline_risk": 16.354285714285712,
+      "grf_predicted_benefit": 1.9779698072997216,
+      "simple_predicted_benefit": 2.02754566507868,
+      "grf_candidate_rank": 87,
+      "simple_candidate_rank": 67,
+      "baseline_risk_candidate_rank": 82
+    },
+    {
+      "village_id": "115",
+      "n_randomized": 35,
+      "baseline_risk": 16.054285714285715,
+      "grf_predicted_benefit": 1.8265122536619127,
+      "simple_predicted_benefit": 1.525441613768679,
+      "grf_candidate_rank": 109,
+      "simple_candidate_rank": 123,
+      "baseline_risk_candidate_rank": 113
+    },
+    {
+      "village_id": "116",
+      "n_randomized": 35,
+      "baseline_risk": 17.62857142857143,
+      "grf_predicted_benefit": 1.7070639305799364,
+      "simple_predicted_benefit": 1.8321703953423525,
+      "grf_candidate_rank": 68,
+      "simple_candidate_rank": 54,
+      "baseline_risk_candidate_rank": 70
+    },
+    {
+      "village_id": "117",
+      "n_randomized": 35,
+      "baseline_risk": 17.89428571428571,
+      "grf_predicted_benefit": 1.5561271756326105,
+      "simple_predicted_benefit": 1.6975476637826494,
+      "grf_candidate_rank": 116,
+      "simple_candidate_rank": 86,
+      "baseline_risk_candidate_rank": 62
+    },
+    {
+      "village_id": "118",
+      "n_randomized": 35,
+      "baseline_risk": 17.14,
+      "grf_predicted_benefit": 2.262304906825075,
+      "simple_predicted_benefit": 1.997894687148414,
+      "grf_candidate_rank": 36,
+      "simple_candidate_rank": 76,
+      "baseline_risk_candidate_rank": 76
+    },
+    {
+      "village_id": "119",
+      "n_randomized": 35,
+      "baseline_risk": 19.21142857142857,
+      "grf_predicted_benefit": 1.7026574594195556,
+      "simple_predicted_benefit": 1.4947591122470212,
+      "grf_candidate_rank": 75,
+      "simple_candidate_rank": 105,
+      "baseline_risk_candidate_rank": 40
+    },
+    {
+      "village_id": "120",
+      "n_randomized": 35,
+      "baseline_risk": 13.22,
+      "grf_predicted_benefit": 1.946832249861446,
+      "simple_predicted_benefit": 1.8141993416221072,
+      "grf_candidate_rank": 92,
+      "simple_candidate_rank": 97,
+      "baseline_risk_candidate_rank": 121
+    },
+    {
+      "village_id": "121",
+      "n_randomized": 34,
+      "baseline_risk": 16.105882352941176,
+      "grf_predicted_benefit": 1.3991825433544425,
+      "simple_predicted_benefit": 1.8763987853725368,
+      "grf_candidate_rank": 127,
+      "simple_candidate_rank": 37,
+      "baseline_risk_candidate_rank": 112
+    },
+    {
+      "village_id": "122",
+      "n_randomized": 35,
+      "baseline_risk": 18.437142857142856,
+      "grf_predicted_benefit": 1.5761563872008115,
+      "simple_predicted_benefit": 1.7954215311836552,
+      "grf_candidate_rank": 93,
+      "simple_candidate_rank": 70,
+      "baseline_risk_candidate_rank": 53
+    },
+    {
+      "village_id": "123",
+      "n_randomized": 34,
+      "baseline_risk": 16.13235294117647,
+      "grf_predicted_benefit": 1.587989248200156,
+      "simple_predicted_benefit": 2.021593173056378,
+      "grf_candidate_rank": 123,
+      "simple_candidate_rank": 43,
+      "baseline_risk_candidate_rank": 108
+    },
+    {
+      "village_id": "124",
+      "n_randomized": 35,
+      "baseline_risk": 16.714285714285715,
+      "grf_predicted_benefit": 1.4340988736068072,
+      "simple_predicted_benefit": 1.736350304234161,
+      "grf_candidate_rank": 121,
+      "simple_candidate_rank": 62,
+      "baseline_risk_candidate_rank": 91
+    },
+    {
+      "village_id": "125",
+      "n_randomized": 35,
+      "baseline_risk": 17.1,
+      "grf_predicted_benefit": 1.8788059318536567,
+      "simple_predicted_benefit": 1.6646418484471714,
+      "grf_candidate_rank": 45,
+      "simple_candidate_rank": 104,
+      "baseline_risk_candidate_rank": 80
+    },
+    {
+      "village_id": "126",
+      "n_randomized": 35,
+      "baseline_risk": 16.214285714285715,
+      "grf_predicted_benefit": 1.8862651368350745,
+      "simple_predicted_benefit": 1.9085068234478244,
+      "grf_candidate_rank": 95,
+      "simple_candidate_rank": 65,
+      "baseline_risk_candidate_rank": 105
+    },
+    {
+      "village_id": "127",
+      "n_randomized": 36,
+      "baseline_risk": 14.488888888888887,
+      "grf_predicted_benefit": 1.523725616714689,
+      "simple_predicted_benefit": 1.4718048932368866,
+      "grf_candidate_rank": 108,
+      "simple_candidate_rank": 108,
+      "baseline_risk_candidate_rank": 123
+    }
+  ]
+}

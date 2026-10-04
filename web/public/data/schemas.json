@@ -1,0 +1,1475 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "1.0.0",
+  "$defs": {
+    "overview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_name",
+        "schema_version",
+        "rows"
+      ],
+      "properties": {
+        "schema_name": {
+          "const": "overview"
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "summary_id",
+              "randomized_participants",
+              "evaluation_participants",
+              "missing_primary_outcome",
+              "villages",
+              "intervention_participants",
+              "control_participants",
+              "intervention_villages",
+              "control_villages",
+              "primary_outcome",
+              "outcome_unit",
+              "treatment_effect_estimate",
+              "treatment_effect_ci_lower",
+              "treatment_effect_ci_upper",
+              "effect_favorable_direction",
+              "benefit_sign_convention",
+              "analysis_population",
+              "reproduction_status",
+              "final_policy_conclusion"
+            ],
+            "properties": {
+              "summary_id": {
+                "type": "string",
+                "x-unit": "identifier",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "SMARTER_PRIMARY"
+                ]
+              },
+              "randomized_participants": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "evaluation_participants": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "missing_primary_outcome": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "villages": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "intervention_participants": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "control_participants": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "intervention_villages": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "control_villages": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "primary_outcome": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "Predicted 10-year ASCVD risk"
+                ]
+              },
+              "outcome_unit": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "percentage points"
+                ]
+              },
+              "treatment_effect_estimate": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "lower favors intervention"
+              },
+              "treatment_effect_ci_lower": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "lower favors intervention"
+              },
+              "treatment_effect_ci_upper": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "lower favors intervention"
+              },
+              "effect_favorable_direction": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "lower"
+                ]
+              },
+              "benefit_sign_convention": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "positive benefit equals a reduction in predicted ASCVD risk"
+                ]
+              },
+              "analysis_population": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "randomized participants with observed primary follow-up outcome"
+                ]
+              },
+              "reproduction_status": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "REPRODUCED"
+                ]
+              },
+              "final_policy_conclusion": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "NO SINGLE ROBUST POLICY WINNER ESTABLISHED"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "x-primary-key": [
+        "summary_id"
+      ],
+      "x-grain": "one overall SMARTER trial summary row",
+      "x-order": [
+        "summary_id"
+      ],
+      "x-source": "bi_intervention_summary.csv",
+      "x-row-selection": "all source rows"
+    },
+    "villages": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_name",
+        "schema_version",
+        "rows"
+      ],
+      "properties": {
+        "schema_name": {
+          "const": "villages"
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 127,
+          "maxItems": 127,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "village_id",
+              "n_randomized",
+              "baseline_risk",
+              "grf_predicted_benefit",
+              "simple_predicted_benefit",
+              "grf_candidate_rank",
+              "simple_candidate_rank",
+              "baseline_risk_candidate_rank"
+            ],
+            "properties": {
+              "village_id": {
+                "type": "string",
+                "x-unit": "identifier",
+                "x-favorability": "not applicable or descriptive",
+                "pattern": "^[1-9][0-9]*$"
+              },
+              "n_randomized": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "baseline_risk": {
+                "type": "number",
+                "x-unit": "percent",
+                "x-favorability": "higher is higher risk burden, not higher causal benefit"
+              },
+              "grf_predicted_benefit": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "higher indicates more evaluated/predicted benefit; not a recommendation"
+              },
+              "simple_predicted_benefit": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "higher indicates more evaluated/predicted benefit; not a recommendation"
+              },
+              "grf_candidate_rank": {
+                "type": "integer",
+                "x-unit": "ordinal rank",
+                "x-favorability": "lower rank is earlier in that policy's frozen ordering; not a recommendation"
+              },
+              "simple_candidate_rank": {
+                "type": "integer",
+                "x-unit": "ordinal rank",
+                "x-favorability": "lower rank is earlier in that policy's frozen ordering; not a recommendation"
+              },
+              "baseline_risk_candidate_rank": {
+                "type": "integer",
+                "x-unit": "ordinal rank",
+                "x-favorability": "lower rank is earlier in that policy's frozen ordering; not a recommendation"
+              }
+            }
+          }
+        }
+      },
+      "x-primary-key": [
+        "village_id"
+      ],
+      "x-grain": "one row per anonymized randomized village",
+      "x-order": [
+        "village_id"
+      ],
+      "x-source": "bi_village_priority.csv",
+      "x-row-selection": "all source rows"
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_name",
+        "schema_version",
+        "rows"
+      ],
+      "properties": {
+        "schema_name": {
+          "const": "validation"
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 15,
+          "maxItems": 15,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "validation_id",
+              "metric",
+              "model_or_comparison",
+              "normalization",
+              "estimate",
+              "ci_lower",
+              "ci_upper",
+              "classification",
+              "unit",
+              "scientific_category"
+            ],
+            "properties": {
+              "validation_id": {
+                "type": "string",
+                "x-unit": "identifier",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "calibration:grf",
+                  "calibration:simple",
+                  "evidence:grf_hte_validation",
+                  "evidence:grf_vs_baseline_risk",
+                  "evidence:incremental_grf_vs_simple",
+                  "participant_spearman:grf_vs_baseline_risk",
+                  "participant_spearman:grf_vs_simple",
+                  "participant_spearman:simple_vs_baseline_risk",
+                  "rate:within_fold:AUTOC:baseline_risk",
+                  "rate:within_fold:AUTOC:grf",
+                  "rate:within_fold:AUTOC:random",
+                  "rate:within_fold:AUTOC:simple",
+                  "village_spearman:mean_benefit_grf_oov_vs_mean_benefit_simple_oov",
+                  "village_spearman:mean_benefit_grf_oov_vs_mean_risk0",
+                  "village_spearman:mean_benefit_simple_oov_vs_mean_risk0"
+                ]
+              },
+              "metric": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "AUTOC",
+                  "calibration_slope",
+                  "evidence_classification",
+                  "priority_spearman",
+                  "village_signal_spearman"
+                ]
+              },
+              "model_or_comparison": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "baseline_risk",
+                  "grf",
+                  "grf_hte_validation",
+                  "grf_vs_baseline_risk",
+                  "grf_vs_simple",
+                  "incremental_grf_vs_simple",
+                  "mean_benefit_grf_oov_vs_mean_benefit_simple_oov",
+                  "mean_benefit_grf_oov_vs_mean_risk0",
+                  "mean_benefit_simple_oov_vs_mean_risk0",
+                  "random",
+                  "simple",
+                  "simple_vs_baseline_risk"
+                ]
+              },
+              "normalization": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "fold_adjusted",
+                  "predeclared_rule",
+                  "raw_participant_scores",
+                  "village_aggregate",
+                  "within_fold"
+                ]
+              },
+              "estimate": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "x-unit": "row.unit",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "ci_lower": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "x-unit": "row.unit",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "ci_upper": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "x-unit": "row.unit",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "classification": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "NOT DEMONSTRATED",
+                  "SUPPORTED",
+                  "positive alignment",
+                  null
+                ]
+              },
+              "unit": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "classification",
+                  "correlation",
+                  "slope",
+                  "validation score"
+                ]
+              },
+              "scientific_category": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "descriptive",
+                  "evidence_classification",
+                  "heuristic_validation",
+                  "predictive_causal_hte_validation",
+                  "sanity_check"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "x-primary-key": [
+        "validation_id"
+      ],
+      "x-grain": "one frozen HTE validation metric or classification",
+      "x-order": [
+        "validation_id"
+      ],
+      "x-source": "bi_hte_validation.csv",
+      "x-row-selection": [
+        [
+          "AUTOC",
+          "within_fold"
+        ],
+        [
+          "calibration_slope",
+          "fold_adjusted"
+        ],
+        [
+          "evidence_classification",
+          "predeclared_rule"
+        ],
+        [
+          "priority_spearman",
+          "raw_participant_scores"
+        ],
+        [
+          "village_signal_spearman",
+          "village_aggregate"
+        ]
+      ]
+    },
+    "subgroups": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_name",
+        "schema_version",
+        "rows"
+      ],
+      "properties": {
+        "schema_name": {
+          "const": "subgroups"
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 13,
+          "maxItems": 13,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "subgroup_effect_id",
+              "moderator",
+              "moderator_label",
+              "subgroup",
+              "analysis_n",
+              "treatment_effect",
+              "ci_lower",
+              "ci_upper",
+              "reconstruction_status",
+              "unit",
+              "favorable_direction",
+              "scientific_category"
+            ],
+            "properties": {
+              "subgroup_effect_id": {
+                "type": "string",
+                "x-unit": "identifier",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "subgroup_00",
+                  "subgroup_01",
+                  "subgroup_02",
+                  "subgroup_03",
+                  "subgroup_04",
+                  "subgroup_05",
+                  "subgroup_06",
+                  "subgroup_07",
+                  "subgroup_08",
+                  "subgroup_09",
+                  "subgroup_10",
+                  "subgroup_11",
+                  "subgroup_12"
+                ]
+              },
+              "moderator": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "Overall",
+                  "age",
+                  "baseline_risk",
+                  "education",
+                  "income",
+                  "occupation",
+                  "sex"
+                ]
+              },
+              "moderator_label": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "Age",
+                  "Annual household income",
+                  "Baseline 10-year ASCVD risk",
+                  "Education",
+                  "Occupation",
+                  "Overall",
+                  "Sex"
+                ]
+              },
+              "subgroup": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "<10,000 yuan",
+                  "<16%",
+                  "<60 years",
+                  ">=10,000 yuan",
+                  ">=16%",
+                  ">=60 years",
+                  "Agricultural worker",
+                  "Below high school",
+                  "High school or above",
+                  "Men",
+                  "Non-agricultural worker",
+                  "Overall",
+                  "Women"
+                ]
+              },
+              "analysis_n": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "treatment_effect": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "lower favors intervention"
+              },
+              "ci_lower": {
+                "type": "number",
+                "x-unit": "percentage points unless table metric states otherwise",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "ci_upper": {
+                "type": "number",
+                "x-unit": "percentage points unless table metric states otherwise",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "reconstruction_status": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "CANONICAL PHASE-4 RESULT",
+                  "PARTIALLY RECONSTRUCTABLE",
+                  "VERIFIED"
+                ]
+              },
+              "unit": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "percentage points of predicted 10-year ASCVD risk"
+                ]
+              },
+              "favorable_direction": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "lower favors intervention",
+                "enum": [
+                  "lower"
+                ]
+              },
+              "scientific_category": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "causal_subgroup_estimate"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "x-primary-key": [
+        "subgroup_effect_id"
+      ],
+      "x-grain": "one overall or reconstructed classical subgroup-effect row",
+      "x-order": [
+        "subgroup_effect_id"
+      ],
+      "x-source": "bi_classical_subgroup_effects.csv",
+      "x-row-selection": "all source rows"
+    },
+    "rollout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_name",
+        "schema_version",
+        "rows"
+      ],
+      "properties": {
+        "schema_name": {
+          "const": "rollout"
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 384,
+          "maxItems": 384,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "policy",
+              "capacity_villages",
+              "n_selected_randomized",
+              "point_population_rollout_value",
+              "point_random_expected_value",
+              "point_gain_vs_random",
+              "population_value_ci_lower",
+              "population_value_ci_upper",
+              "gain_ci_lower",
+              "gain_ci_upper",
+              "interval_type",
+              "bootstrap_replicates",
+              "is_fixed_anchor"
+            ],
+            "properties": {
+              "policy": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "baseline_risk",
+                  "grf",
+                  "simple"
+                ]
+              },
+              "capacity_villages": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "n_selected_randomized": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "point_population_rollout_value": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "higher indicates more evaluated/predicted benefit; not a recommendation"
+              },
+              "point_random_expected_value": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "point_gain_vs_random": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "higher indicates more evaluated/predicted benefit; not a recommendation"
+              },
+              "population_value_ci_lower": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "population_value_ci_upper": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "gain_ci_lower": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "gain_ci_upper": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "interval_type": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "pointwise_95_percentile_bootstrap"
+                ]
+              },
+              "bootstrap_replicates": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "is_fixed_anchor": {
+                "type": "boolean",
+                "x-unit": "boolean",
+                "x-favorability": "not applicable or descriptive"
+              }
+            }
+          }
+        }
+      },
+      "x-primary-key": [
+        "policy",
+        "capacity_villages"
+      ],
+      "x-grain": "one row per policy and whole-village capacity K",
+      "x-order": [
+        "policy",
+        "capacity_villages"
+      ],
+      "x-source": "bi_rollout_capacity.csv",
+      "x-row-selection": "all source rows"
+    },
+    "anchors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_name",
+        "schema_version",
+        "rows"
+      ],
+      "properties": {
+        "schema_name": {
+          "const": "anchors"
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 15,
+          "maxItems": 15,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "policy",
+              "capacity_villages",
+              "point_population_rollout_value",
+              "population_value_ci_lower",
+              "population_value_ci_upper",
+              "point_random_expected_value",
+              "point_gain_vs_random",
+              "gain_ci_lower",
+              "gain_ci_upper",
+              "interval_type",
+              "bootstrap_replicates",
+              "policy_vs_random_classification",
+              "capacity_advantage_label",
+              "selected_villages",
+              "n_selected_randomized",
+              "randomized_coverage",
+              "n_selected_evaluation",
+              "evaluation_coverage",
+              "anchor_role"
+            ],
+            "properties": {
+              "policy": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "baseline_risk",
+                  "grf",
+                  "simple"
+                ]
+              },
+              "capacity_villages": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "point_population_rollout_value": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "higher indicates more evaluated/predicted benefit; not a recommendation"
+              },
+              "population_value_ci_lower": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "population_value_ci_upper": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "point_random_expected_value": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "point_gain_vs_random": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "higher indicates more evaluated/predicted benefit; not a recommendation"
+              },
+              "gain_ci_lower": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "gain_ci_upper": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "interval_type": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "pointwise_95_percentile_bootstrap"
+                ]
+              },
+              "bootstrap_replicates": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "policy_vs_random_classification": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "INCONCLUSIVE",
+                  "RECONCILIATION ENDPOINT"
+                ]
+              },
+              "capacity_advantage_label": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "NO CLEAR CAPACITY-SPECIFIC ADVANTAGE",
+                  "RECONCILIATION ENDPOINT"
+                ]
+              },
+              "selected_villages": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "n_selected_randomized": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "randomized_coverage": {
+                "type": "number",
+                "x-unit": "proportion",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "n_selected_evaluation": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "evaluation_coverage": {
+                "type": "number",
+                "x-unit": "proportion",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "anchor_role": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "fixed_inference",
+                  "reconciliation"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "x-primary-key": [
+        "policy",
+        "capacity_villages"
+      ],
+      "x-grain": "one row per policy and fixed anchor K",
+      "x-order": [
+        "policy",
+        "capacity_villages"
+      ],
+      "x-source": "bi_rollout_anchor.csv",
+      "x-row-selection": "all source rows"
+    },
+    "overlap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_name",
+        "schema_version",
+        "rows"
+      ],
+      "properties": {
+        "schema_name": {
+          "const": "overlap"
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 15,
+          "maxItems": 15,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "capacity_villages",
+              "comparison",
+              "policy_left",
+              "policy_right",
+              "shared_villages",
+              "jaccard_overlap",
+              "scientific_category"
+            ],
+            "properties": {
+              "capacity_villages": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "comparison": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "grf_vs_baseline_risk",
+                  "grf_vs_simple",
+                  "simple_vs_baseline_risk"
+                ]
+              },
+              "policy_left": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "grf",
+                  "simple"
+                ]
+              },
+              "policy_right": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "baseline_risk",
+                  "simple"
+                ]
+              },
+              "shared_villages": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "jaccard_overlap": {
+                "type": "number",
+                "x-unit": "proportion",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "scientific_category": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "descriptive"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "x-primary-key": [
+        "comparison",
+        "capacity_villages"
+      ],
+      "x-grain": "one row per policy pair and fixed anchor K",
+      "x-order": [
+        "comparison",
+        "capacity_villages"
+      ],
+      "x-source": "bi_policy_overlap.csv",
+      "x-row-selection": "all source rows"
+    },
+    "robustness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_name",
+        "schema_version",
+        "rows"
+      ],
+      "properties": {
+        "schema_name": {
+          "const": "robustness"
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 12,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "policy",
+              "capacity_villages",
+              "phase11a_point_gain_vs_random",
+              "phase11a_gain_ci_lower",
+              "phase11a_gain_ci_upper",
+              "phase11a_gain_classification",
+              "phase11a_capacity_advantage_label",
+              "raw_ranking_stability",
+              "equal_village_consistency",
+              "single_village_influence",
+              "scientific_category"
+            ],
+            "properties": {
+              "policy": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "baseline_risk",
+                  "grf",
+                  "simple"
+                ]
+              },
+              "capacity_villages": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "phase11a_point_gain_vs_random": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "higher indicates more evaluated/predicted benefit; not a recommendation"
+              },
+              "phase11a_gain_ci_lower": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "phase11a_gain_ci_upper": {
+                "type": "number",
+                "x-unit": "percentage points",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "phase11a_gain_classification": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "INCONCLUSIVE"
+                ]
+              },
+              "phase11a_capacity_advantage_label": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "NO CLEAR CAPACITY-SPECIFIC ADVANTAGE"
+                ]
+              },
+              "raw_ranking_stability": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "SENSITIVE"
+                ]
+              },
+              "equal_village_consistency": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "CONSISTENT"
+                ]
+              },
+              "single_village_influence": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "ROBUST TO SINGLE-VILLAGE DELETION",
+                  "SENSITIVE TO SINGLE-VILLAGE DELETION"
+                ]
+              },
+              "scientific_category": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "causal_policy_evaluation_and_sensitivity"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "x-primary-key": [
+        "policy",
+        "capacity_villages"
+      ],
+      "x-grain": "one row per policy and non-full inferential anchor K",
+      "x-order": [
+        "policy",
+        "capacity_villages"
+      ],
+      "x-source": "bi_policy_robustness.csv",
+      "x-row-selection": "all source rows"
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_name",
+        "schema_version",
+        "rows"
+      ],
+      "properties": {
+        "schema_name": {
+          "const": "coverage"
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 150,
+          "maxItems": 150,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "policy",
+              "capacity_villages",
+              "capacity_role",
+              "dimension",
+              "dimension_label",
+              "category",
+              "n_subgroup_total",
+              "n_subgroup_covered",
+              "subgroup_coverage",
+              "n_overall_covered",
+              "overall_randomized_coverage",
+              "coverage_gap",
+              "analysis_note",
+              "scientific_category"
+            ],
+            "properties": {
+              "policy": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "baseline_risk",
+                  "grf",
+                  "simple"
+                ]
+              },
+              "capacity_villages": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "capacity_role": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "endpoint_reconciliation",
+                  "fixed_descriptive_anchor"
+                ]
+              },
+              "dimension": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "age",
+                  "education",
+                  "income",
+                  "occupation",
+                  "sex"
+                ]
+              },
+              "dimension_label": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "Age",
+                  "Annual household income",
+                  "Education",
+                  "Occupation",
+                  "Sex"
+                ]
+              },
+              "category": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "<10,000 yuan",
+                  "<60 years",
+                  ">=10,000 yuan",
+                  ">=60 years",
+                  "Agricultural worker",
+                  "Below high school",
+                  "High school or above",
+                  "Men",
+                  "Non-agricultural worker",
+                  "Women"
+                ]
+              },
+              "n_subgroup_total": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "n_subgroup_covered": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "subgroup_coverage": {
+                "type": "number",
+                "x-unit": "proportion",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "n_overall_covered": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "overall_randomized_coverage": {
+                "type": "number",
+                "x-unit": "proportion",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "coverage_gap": {
+                "type": "number",
+                "x-unit": "proportion",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "analysis_note": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "Coverage comparisons are descriptive and are not fairness-optimization criteria."
+                ]
+              },
+              "scientific_category": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "descriptive"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "x-primary-key": [
+        "policy",
+        "capacity_villages",
+        "dimension",
+        "category"
+      ],
+      "x-grain": "one row per policy, anchor, dimension, and subgroup category",
+      "x-order": [
+        "policy",
+        "capacity_villages",
+        "dimension",
+        "category"
+      ],
+      "x-source": "bi_equity_coverage.csv",
+      "x-row-selection": "all source rows"
+    },
+    "policies": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_name",
+        "schema_version",
+        "rows"
+      ],
+      "properties": {
+        "schema_name": {
+          "const": "policies"
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "policy",
+              "policy_label",
+              "scientific_category"
+            ],
+            "properties": {
+              "policy": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "baseline_risk",
+                  "grf",
+                  "simple"
+                ]
+              },
+              "policy_label": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "Baseline risk",
+                  "GRF",
+                  "Simple HTE"
+                ]
+              },
+              "scientific_category": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "heuristic",
+                  "predictive_causal_hte"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "x-primary-key": [
+        "policy"
+      ],
+      "x-grain": "one row per candidate rollout policy",
+      "x-order": [
+        "policy"
+      ],
+      "x-source": "dim_policy.csv",
+      "x-row-selection": "all source rows"
+    },
+    "capacities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_name",
+        "schema_version",
+        "rows"
+      ],
+      "properties": {
+        "schema_name": {
+          "const": "capacities"
+        },
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 128,
+          "maxItems": 128,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "capacity_villages",
+              "is_fixed_anchor",
+              "capacity_role"
+            ],
+            "properties": {
+              "capacity_villages": {
+                "type": "integer",
+                "x-unit": "count",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "is_fixed_anchor": {
+                "type": "boolean",
+                "x-unit": "boolean",
+                "x-favorability": "not applicable or descriptive"
+              },
+              "capacity_role": {
+                "type": "string",
+                "x-unit": "text/category",
+                "x-favorability": "not applicable or descriptive",
+                "enum": [
+                  "curve_only",
+                  "fixed_inference",
+                  "reconciliation"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "x-primary-key": [
+        "capacity_villages"
+      ],
+      "x-grain": "one row per whole-village capacity K",
+      "x-order": [
+        "capacity_villages"
+      ],
+      "x-source": "dim_capacity.csv",
+      "x-row-selection": "all source rows"
+    }
+  }
+}

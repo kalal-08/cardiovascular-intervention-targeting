@@ -1,0 +1,646 @@
+{
+  "schema_name": "capacities",
+  "schema_version": "1.0.0",
+  "rows": [
+    {
+      "capacity_villages": 0,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 1,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 2,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 3,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 4,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 5,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 6,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 7,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 8,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 9,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 10,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 11,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 12,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 13,
+      "is_fixed_anchor": true,
+      "capacity_role": "fixed_inference"
+    },
+    {
+      "capacity_villages": 14,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 15,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 16,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 17,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 18,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 19,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 20,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 21,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 22,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 23,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 24,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 25,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 26,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 27,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 28,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 29,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 30,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 31,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 32,
+      "is_fixed_anchor": true,
+      "capacity_role": "fixed_inference"
+    },
+    {
+      "capacity_villages": 33,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 34,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 35,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 36,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 37,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 38,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 39,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 40,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 41,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 42,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 43,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 44,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 45,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 46,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 47,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 48,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 49,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 50,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 51,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 52,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 53,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 54,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 55,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 56,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 57,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 58,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 59,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 60,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 61,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 62,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 63,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 64,
+      "is_fixed_anchor": true,
+      "capacity_role": "fixed_inference"
+    },
+    {
+      "capacity_villages": 65,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 66,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 67,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 68,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 69,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 70,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 71,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 72,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 73,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 74,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 75,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 76,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 77,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 78,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 79,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 80,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 81,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 82,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 83,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 84,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 85,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 86,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 87,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 88,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 89,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 90,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 91,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 92,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 93,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 94,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 95,
+      "is_fixed_anchor": true,
+      "capacity_role": "fixed_inference"
+    },
+    {
+      "capacity_villages": 96,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 97,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 98,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 99,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 100,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 101,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 102,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 103,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 104,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 105,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 106,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 107,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 108,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 109,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 110,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 111,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 112,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 113,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 114,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 115,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 116,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 117,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 118,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 119,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 120,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 121,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 122,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 123,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 124,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 125,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 126,
+      "is_fixed_anchor": false,
+      "capacity_role": "curve_only"
+    },
+    {
+      "capacity_villages": 127,
+      "is_fixed_anchor": true,
+      "capacity_role": "reconciliation"
+    }
+  ]
+}
