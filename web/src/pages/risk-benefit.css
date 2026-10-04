@@ -81,3 +81,35 @@
   .risk-evidence { gap: 12px; }
   .report-fit .risk-evidence .panel { padding-top: 12px; padding-bottom: 12px; }
 }
+@media (min-width: 1201px) and (max-width: 1600px), (min-width: 1201px) and (max-height: 799px) {
+  .risk-benefit .page-heading { margin-bottom: var(--viewport-gap); }
+  .risk-kpis .kpi { min-height: 0; padding: var(--viewport-padding); }
+  .risk-kpis dd { font-size: clamp(1.5rem, 3.6dvh, 1.875rem); margin: 6px 0; }
+  .risk-kpis .kpi-support { font-size: .75rem; }
+  .risk-plot-header { gap: 8px; }
+  .risk-plot-header h2 { font-size: 1.125rem; margin-bottom: 4px; }
+  .risk-plot-header p { font-size: .8125rem; }
+  .risk-signals button { min-width: 88px; min-height: 36px; padding: 4px 8px; font-size: .8125rem; }
+  .risk-plot .chart-surface { height: clamp(240px, calc(100dvh - 430px), 340px); }
+  .risk-fixed-note { padding: 8px; font-size: .75rem; }
+  .risk-evidence { gap: var(--viewport-gap); }
+  .report-fit .risk-evidence .panel { padding: var(--viewport-padding); }
+  .risk-evidence h2 { font-size: 1.0625rem; margin-bottom: 4px; }
+  .risk-panel-caption { font-size: .8125rem; margin-bottom: 4px; }
+  .risk-agreement table, .risk-agreement thead { font-size: .8125rem; }
+  .risk-agreement th, .risk-agreement td { padding: 4px 0; }
+  .risk-evidence ul { font-size: .8125rem; line-height: 1.4; }
+}
+@media (min-width: 1201px) and (max-height: 849px) {
+  .risk-benefit .page-heading { margin-bottom: var(--viewport-gap); }
+  .risk-kpis .kpi { min-height: 0; }
+  .risk-kpis dd { margin: 6px 0; }
+  .risk-plot .chart-surface { height: clamp(240px, calc(100dvh - 430px), 340px); }
+  .risk-fixed-note { padding: var(--viewport-padding); }
+  .risk-evidence { gap: var(--viewport-gap); }
+  .report-fit .risk-evidence .panel { padding: var(--viewport-padding); }
+  .risk-evidence h2 { font-size: 1.125rem; margin-bottom: 4px; }
+  .risk-panel-caption { margin-bottom: 6px; }
+  .risk-agreement th, .risk-agreement td { padding: 4px 0; }
+  .risk-evidence ul { line-height: 1.4; }
+}

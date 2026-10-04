@@ -185,10 +185,11 @@ const cases = [
     }
     await page.getByRole('link', { name: 'Robustness', exact: true }).click(); await expectRoute(page, '/robustness', 'header');
     await page.setViewportSize({ width: 1366, height: 768 });
-    await page.goto(base + '/overview'); await page.locator('.overview-middle').waitFor(); await page.locator('.product').click();
+    await page.goto(base + '/rollout'); await page.locator('.rollout-charts').waitFor(); await page.locator('.product').click();
+    assert(await page.evaluate(() => document.documentElement.scrollHeight > innerHeight), 'Native-scroll check requires a scrollable document');
     await page.keyboard.press('ArrowDown'); await page.waitForFunction(() => scrollY > 0);
     const scroll = await page.evaluate(() => scrollY); await page.keyboard.press('ArrowUp'); await page.waitForFunction(y => scrollY < y, scroll);
-    assert.equal(new URL(page.url()).pathname, '/overview', 'Header Up/Down scrolls without navigation');
+    assert.equal(new URL(page.url()).pathname, '/rollout', 'Header Up/Down scrolls without navigation');
     assert(await page.locator('header').evaluate(n => document.activeElement === n), 'Up/Down scrolling keeps mouse-activated white-header focus');
     for (const followUp of ['load', 'mouse', 'history', 'outside']) {
       const cold = await browser.newPage({ viewport: { width: 1920, height: 990 } }); watch(cold);
@@ -223,7 +224,7 @@ const cases = [
       await touch.goto(base + '/overview'); await touch.locator('.product').tap(); await expectRoute(touch, '/overview', 'header');
       await touch.keyboard.press('ArrowRight'); await expectRoute(touch, '/risk-vs-benefit');
       await touch.getByRole('link', { name: 'HTE Validation', exact: true }).tap(); await expectRoute(touch, '/hte-validation', 'header');
-      await touch.locator('main h1').tap(); await touch.keyboard.press('ArrowLeft');
+      await touch.getByRole('heading', { name: 'HTE Validation', exact: true }).tap(); await touch.keyboard.press('ArrowLeft');
       assert.equal(new URL(touch.url()).pathname, '/hte-validation', 'Touch outside ends header keyboard scope');
     } finally { await touch.close(); }
     assert.deepEqual(errors, []);

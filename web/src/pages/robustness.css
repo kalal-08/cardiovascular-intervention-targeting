@@ -102,4 +102,26 @@
 @media (max-width: 1700px) { .p5 .page-heading { flex-wrap: wrap; } .p5-panels { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); } .p5-rankings { min-width: 840px; } }
 @media (max-width: 1400px) { .p5-panels { grid-template-columns: 1fr; } .p5-rank-scroll { height: 500px; flex: none; } .p5-right { grid-template-columns: repeat(2, minmax(0, 1fr)); } .p5-coverage { grid-column: 1 / -1; } }
 @media (max-width: 1000px) { .p5-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .p5-right { grid-template-columns: 1fr; } .p5-context { margin: 0 0 8px; text-align: left; } }
+@media (min-width: 1201px) and (max-width: 1600px), (min-width: 1201px) and (max-height: 799px) {
+  .content:has(> .p5) { padding: var(--viewport-padding) 24px; }
+  .p5 { --p5-gap: var(--viewport-gap); --p5-padding: var(--viewport-padding); }
+  .p5 .page-heading { gap: 12px; margin-bottom: var(--p5-gap); }
+  .p5 .page-heading h1 { font-size: clamp(1.5rem, 3.5dvh, 1.8rem); margin-bottom: 4px; }
+  .p5 .page-subtitle { font-size: .875rem; }
+  .p5-controls { gap: 8px; }
+  .p5-controls fieldset { padding: 4px; }
+  .p5-controls button { font-size: .75rem; min-height: 32px; padding: 4px 8px; }
+  .p5-kpis .kpi { padding: 6px 10px; }
+  .p5-kpis dd { font-size: 1.75rem; }
+  .p5-panels { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+  .p5-rank-scroll { height: 0; flex: 1 1 auto; min-height: 360px; }
+  .p5-right { grid-template-columns: minmax(0, 1fr); }
+  .p5-coverage { grid-column: auto; }
+  .p5-rankings { min-width: 760px; }
+  .p5 .p5-rankings th, .p5 .p5-rankings td { padding: 5px 4px; font-size: .75rem; }
+  .p5 .panel h2 { font-size: 1.0625rem; }
+  .p5-overlap .p5-grid, .p5-coverage .p5-grid { min-width: 500px; }
+  .p5 .p5-grid th, .p5 .p5-grid td { padding-left: 4px; padding-right: 4px; }
+  .p5-rank-caption { margin-bottom: 6px; }
+}
 @media (max-width: 600px) { .p5 { --p5-padding: 14px; } .p5-kpis { grid-template-columns: 1fr; } .p5 .page-heading h1 { font-size: 1.7rem; } .p5-controls { width: 100%; } .p5-controls fieldset { flex-wrap: wrap; max-width: 100%; } .p5-rank-caption { flex-wrap: wrap; gap: 4px; } .p5-summary { flex-wrap: wrap; } .p5-classification { max-width: none; text-align: left; } .p5-coverage h2 { padding-right: 0; } .p5-dimension { position: static; margin: 8px 0; } }

@@ -35,7 +35,7 @@ The endpoint is predicted 10-year ASCVD risk, not observed cardiovascular events
 
 **Power BI:** [final five-page PDF](reports/Cardiovascular_Intervention_Targeting_final.pdf) · [screenshots and implementation specification](powerbi/PUBLIC_README.md)
 
-**Interactive web app:** deployment pending; the live link will be added after hosted validation.
+**Interactive web app:** the live link will be added after hosted validation.
 
 | Page | Question answered |
 | --- | --- |
@@ -44,6 +44,8 @@ The endpoint is predicted 10-year ASCVD risk, not observed cardiovascular events
 | HTE Validation | Do benefit scores support prioritization, and do comparisons establish superiority? |
 | Rollout | How do population value and gain versus random vary with capacity? |
 | Robustness | How stable are policy rankings, overlap and descriptive coverage? |
+
+The five-page monitor/laptop layout was visually approved at the requested 100% zoom. Spacing adapts to available viewport width and height without global scaling; shorter windows can scroll, and Rollout/Robustness retain intentional scrolling. See [viewport adaptation](docs/public/DASHBOARD_DECISIONS.md#viewport-adaptation) and [validation scope](docs/public/VALIDATION.md#local-viewport-regression).
 
 ## Architecture and engineering
 

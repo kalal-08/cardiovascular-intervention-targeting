@@ -28,6 +28,20 @@ These are local validation results, not hosted certification. Documentation-only
 
 ## Open limitations
 
+### Local viewport regression
+
+An earlier local responsive candidate was checked in Edge on 2026-10-05 across twelve viewport sizes: 60 route/viewport cases passed, with byte-identical default screenshots for all five routes at 1920×990 and 390×844. Dynamic resizing preserved chart instances, selected policy/capacity, URL and Village-ID selection. These results belong to that earlier candidate, not the current follow-up.
+
+Subsequent user-supplied, banner-free screenshots showed remaining laptop overflow on Pages 2–3 at 100% zoom and a preferred compact appearance at 80%. The current follow-up applies bounded compact density across all five pages without global scaling, reduces the oversized header brand column and avoids premature evidence stacking. The monitor's 100% composition remains the reference; browser-debugging banners are not treated as product failures.
+
+Current local checks pass: 141 reconciliation targets, six exporter tests, seven source-contract checks, public-data validation/regressions, TypeScript/build and HTTP checks for thirteen JSON assets, five routes and 29 served files. The responsive regression contains 65 route/viewport cases across thirteen sizes and checks compact evidence fit, bounded header spacing, all thirteen subgroup rows, all nine village columns, chart resizing and state retention. Its syntax was checked, but the browser suite was not executed for this follow-up at the user's request. Prior page/header suite results are historical evidence only.
+
+The compact scatterplot label regression was observed failing before the correction and passing afterward. The existing ECharts SVG renderer ran in Node without a browser, checking both signals at six chart-size states each: compact labels render, monitor/tall/narrow labels restore during resizing, and fixed Y-axis limits remain unchanged. This proves renderer/media behavior, not browser font appearance or animation smoothness.
+
+The user approved and locked the five-page layout on 2026-10-05 after manual monitor/laptop review at the requested 100% zoom. Overview's complete evidence, both GRF/Simple HTE scatterplots and the corrected HTE fit were accepted. Top and bottom screenshots of Rollout and Robustness showed readable lower panels, all ranking columns and expected scrolling. This is local visual approval, not pixel-identical rendering or universal screen-fit certification. Latest manual window-transfer/resize, selector/sort/row-selection checks remain unverified; current mobile preservation and hosted behavior have not been revalidated.
+
+From `web/`, run `node scripts/check-responsive-browser.cjs http://127.0.0.1:4173 playwright` with an existing Playwright installation and Edge. An optional third argument selects the provisioned Playwright module. Run once with `--baseline` before edits to enable exact prior-render comparisons; otherwise the standalone geometry/resize checks run without claiming a prior-render comparison. Temporary results stay under ignored `.wrangler/qa/responsive/`. Stop a running production preview before rebuilding and restart it afterward.
+
 Exact Baseline Risk orange `#F28C00` is retained, with approximately 2.463:1 text contrast on white. Accessibility acceptance remains open; visual approval is not WCAG conformance. Actual screen-reader and physical-device execution, Firefox/Safari coverage and hosted validation are not claimed. The static Power BI PDF is untagged.
 
 ECharts produces a known bundle-size warning. Device-specific performance measurements are not universal guarantees. Hash validation checks integrity against supplied metadata, not independent scientific authenticity. Analytical limitations are documented in [methods](ANALYSIS_METHODS.md), [HTE validation](HTE_VALIDATION.md) and [rollout/uncertainty](ROLLOUT_AND_UNCERTAINTY.md).

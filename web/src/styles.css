@@ -140,6 +140,45 @@ button:disabled, select:disabled { opacity: var(--disabled-opacity); cursor: not
   nav { flex-wrap: wrap; gap: var(--space-1); }
   nav > a { min-height: 48px; }
 }
+/* Keep a single header row when its real labels fit; narrower views retain reflow. */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .header-inner { grid-template-columns: clamp(320px, 25vw, 380px) minmax(620px, 720px) minmax(140px, 1fr); gap: 12px; padding: 0 24px; }
+  .product { font-size: clamp(1.125rem, 1.3vw, 1.25rem); }
+  .subtitle { font-size: .875rem; }
+  .header nav { grid-column: 2; grid-row: 1; width: 100%; gap: 12px; }
+  .report-context { grid-column: 3; grid-row: 1; }
+  .report-tabs { grid-template-columns: 150fr 190fr 195fr 120fr 150fr; }
+  .report-tabs > a { min-height: 56px; padding: 0 6px; font-size: 1rem; }
+  .report-tabs > a[aria-current="page"]::after { bottom: -18px; }
+}
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .header { --header-height: clamp(64px, 9.5dvh, 80px); --compact-tab-height: clamp(44px, 6.5dvh, 56px); }
+  .report-tabs > a { min-height: var(--compact-tab-height); }
+  .report-tabs > a[aria-current="page"]::after { bottom: calc((var(--compact-tab-height) - var(--header-height)) / 2); }
+}
+/* Reduce empty space, not text scale. Short viewports may still scroll naturally. */
+@media (min-width: 1201px) and (max-width: 1600px), (min-width: 1201px) and (max-height: 799px) {
+  .content { --viewport-gap: clamp(6px, 1dvh, 10px); --viewport-padding: clamp(8px, 1.2dvh, 12px); }
+  .report-fit { padding: var(--viewport-padding) 24px; --report-gap: var(--viewport-gap); --report-padding: var(--viewport-padding); }
+  .report-fit .page-heading { margin-bottom: var(--report-gap); }
+  .report-fit .page-heading h1 { font-size: clamp(1.5rem, 3.5dvh, 1.875rem); margin-bottom: 4px; }
+  .report-fit .page-subtitle { font-size: .875rem; }
+  .report-fit .panel, .report-fit .kpi { padding: var(--report-padding); }
+  .report-fit .overview-kpis, .report-fit .risk-kpis, .report-fit .overview-middle, .report-fit .hte-top { gap: var(--report-gap); margin-bottom: var(--report-gap); }
+  .report-fit .risk-body, .report-fit .hte-bottom { gap: var(--report-gap); }
+}
+/* Height-driven density is continuous within readable bounds, never canvas scaling. */
+@media (min-width: 1201px) and (max-height: 849px) {
+  .header { --header-height: clamp(64px, 9.5dvh, 80px); --compact-tab-height: clamp(44px, 6.5dvh, 56px); }
+  .report-tabs > a { min-height: var(--compact-tab-height); }
+  .report-tabs > a[aria-current="page"]::after { bottom: calc((var(--compact-tab-height) - var(--header-height)) / 2); }
+  .report-fit { --viewport-gap: clamp(6px, 1dvh, 10px); --viewport-padding: clamp(8px, 1.2dvh, 12px); padding-top: var(--viewport-padding); padding-bottom: var(--viewport-padding); }
+  .report-fit .page-heading { margin-bottom: var(--viewport-gap); }
+  .report-fit .page-heading h1 { font-size: clamp(1.5rem, 3.5dvh, 1.875rem); }
+  .report-fit .panel, .report-fit .kpi { padding: var(--viewport-padding); }
+  .report-fit .overview-kpis, .report-fit .risk-kpis, .report-fit .overview-middle, .report-fit .hte-top { gap: var(--viewport-gap); margin-bottom: var(--viewport-gap); }
+  .report-fit .risk-body, .report-fit .hte-bottom { gap: var(--viewport-gap); }
+}
 @media (max-width: 900px) {
   .header-inner { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .report-context { grid-column: 1; grid-row: 2; display: flex; gap: 8px; text-align: left; flex-wrap: wrap; }

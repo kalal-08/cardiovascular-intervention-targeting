@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { init } from 'echarts';
 import { riskBenefitView, riskBenefitChart, pointDetail } from '../src/pages/risk-benefit-chart.ts';
 import type { VillagesRow, ValidationRow } from '../src/data.generated.ts';
 const villages: VillagesRow[] = JSON.parse(readFileSync(new URL('../public/data/villages.json', import.meta.url), 'utf8')).rows;
@@ -32,6 +33,26 @@ for (const signal of ['grf', 'simple'] as const) {
   const text = option.tooltip.formatter({ dataIndex: 0 });
   assert.equal(text, pointDetail(villages[0], signal));
   assert(!text.includes(signal === 'grf' ? 'Simple HTE benefit' : 'GRF benefit'));
+  const chart = init(null, undefined, { renderer: 'svg', ssr: true, width: 1000, height: 302 });
+  const label = signal === 'grf' ? 'GRF' : 'Simple HTE';
+  const compactName = `${label}-predicted benefit\n(percentage points)`;
+  try {
+    chart.setOption({ ...option, animation: false });
+    assert.equal((chart.getOption().yAxis as any[])[0].name, compactName, 'Short desktop chart uses a complete, compact benefit/unit label');
+    assert(chart.renderToSVGString().includes(`${label}-predicted benefit`), 'Compact label is rendered, not only configured');
+    chart.resize({ width: 1000, height: 340 });
+    assert.equal((chart.getOption().yAxis as any[])[0].name, compactName);
+    chart.resize({ width: 1000, height: 360 });
+    assert.equal((chart.getOption().yAxis as any[])[0].name, `${label}-predicted intervention benefit\n(percentage points)`, 'Monitor restores its existing label');
+    chart.resize({ width: 1000, height: 440 });
+    assert.equal((chart.getOption().yAxis as any[])[0].name, `${label}-predicted intervention benefit (percentage points)`, 'Tall chart restores its full label');
+    chart.resize({ width: 360, height: 302 });
+    assert.equal((chart.getOption().yAxis as any[])[0].name, `${label} benefit (pp)`, 'Existing narrow-chart label remains unchanged');
+    chart.resize({ width: 1000, height: 302 });
+    assert.equal((chart.getOption().yAxis as any[])[0].name, compactName, 'Returning to compact desktop restores the correct label');
+    assert.equal((chart.getOption().yAxis as any[])[0].min, 1);
+    assert.equal((chart.getOption().yAxis as any[])[0].max, 3.5);
+  } finally { chart.dispose(); }
 }
 assert.equal(JSON.stringify(villages), before);
 const changed = villages.map((row, index) => index === 0 ? { ...row, baseline_risk: 24, grf_predicted_benefit: 3.4 } : row);

@@ -146,3 +146,57 @@
   .hte-agreement-table th, .hte-agreement-table td { padding-top: 6px; padding-bottom: 6px; }
   .hte-forest-footer { padding-top: 4px; }
 }
+@media (min-width: 1201px) and (max-width: 1750px), (min-width: 1201px) and (max-height: 799px) {
+  .hte-top > .panel { min-height: 264px; }
+  .autoc-table tbody tr { height: 28px; }
+  .calibration-table tbody tr { height: 60px; }
+  .hte-agreement-table th, .hte-agreement-table td { padding-top: 6px; padding-bottom: 6px; }
+  .hte-evidence-status { min-height: 48px; padding: 10px 12px; }
+  .hte-boundaries { margin-top: 12px; padding-top: 12px; }
+  .hte-boundaries ul { margin-top: 10px; }
+  .hte-boundaries li { margin-bottom: 8px; }
+}
+@media (min-width: 1201px) and (max-height: 849px) {
+  .hte-validation .page-heading { margin-bottom: var(--viewport-gap); }
+  .hte-top > .panel { min-height: clamp(236px, 32dvh, 264px); }
+  .hte-top .hte-legend, .hte-forest .hte-legend { margin-bottom: 6px; }
+  .autoc-table tbody tr { height: 26px; }
+  .calibration-table tbody tr { height: 54px; }
+  .hte-agreement-table th, .hte-agreement-table td { padding-top: 4px; padding-bottom: 4px; }
+  .hte-evidence-status { padding: 8px 10px; }
+  .hte-boundaries { margin-top: 8px; padding-top: 8px; }
+  .hte-boundaries li { margin-bottom: 6px; }
+}
+/* Keep the evidence grid intact where compact columns remain readable. */
+@media (min-width: 1201px) and (max-width: 1600px), (min-width: 1201px) and (max-height: 799px) {
+  .hte-validation .panel { padding: 8px; }
+  .hte-validation h2 { font-size: 1rem; margin-bottom: 4px; }
+  .hte-top > .panel { min-height: 0; }
+  .hte-top { grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr) minmax(0, 1.1fr); }
+  .hte-top .hte-legend, .hte-forest .hte-legend { position: static; gap: 4px 10px; margin-bottom: 4px; }
+  .hte-subtitle { font-size: .75rem; margin-bottom: 4px; }
+  .hte-note { padding-top: 4px; line-height: 1.35; }
+  .hte-validation-table th, .autoc-table .hte-estimate { font-size: .8125rem; }
+  .autoc-table tbody tr, .autoc-table .hte-interval { height: 24px; }
+  .calibration-table tbody tr, .calibration-table .hte-interval { height: 48px; }
+  .hte-agreement-table th, .hte-agreement-table td { font-size: .8125rem; padding: 4px 6px; }
+  .hte-bottom { grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr); }
+  .hte-forest-table { min-width: 760px; font-size: .75rem; line-height: 1.35; }
+  .hte-forest-table th, .hte-forest-table td { padding: 0 4px; }
+  .hte-forest-table thead th { height: 24px; font-size: .6875rem; }
+  .hte-forest-table tbody .hte-interval { height: 17px; }
+  .hte-forest-table tfoot .hte-axis { margin-top: 4px; }
+  .hte-forest-footer { gap: 8px; padding-top: 4px; line-height: 1.35; }
+  .hte-evidence-status { min-height: 0; padding: 6px 8px; gap: 4px 8px; margin-bottom: 6px; font-size: .75rem; }
+  .hte-evidence-status strong { font-size: .8125rem; }
+  .hte-boundaries { margin-top: 6px; padding-top: 6px; }
+  .hte-boundaries ul { margin-top: 6px; padding-left: 16px; font-size: .8125rem; line-height: 1.35; }
+  .hte-boundaries li { margin-bottom: 4px; }
+}
+@media (min-width: 1440px) and (max-width: 1600px) {
+  .hte-top .hte-legend, .hte-forest .hte-legend { position: absolute; right: var(--viewport-padding); top: calc(var(--viewport-padding) + 2px); margin-bottom: 0; }
+  .hte-top .hte-legend { gap: 4px 8px; }
+  .hte-autoc h2 { padding-right: 230px; }
+  .hte-calibration h2 { padding-right: 210px; }
+  .hte-forest h2 { padding-right: 420px; }
+}

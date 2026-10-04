@@ -65,6 +65,8 @@ export function riskBenefitChart(view: ReturnType<typeof riskBenefitView>, signa
     // ECharts retains the last matching media patch unless a default restores its fields.
     media: [{ option: desktop }, { query: { maxHeight: 420 }, option: {
       ...desktop, yAxis: { ...desktop.yAxis, name: yName.replace(' (', '\n('), nameGap: 44 },
+    } }, { query: { minWidth: 551, maxHeight: 340 }, option: {
+      yAxis: { ...desktop.yAxis, name: `${POLICY[signal].label}-predicted benefit\n(percentage points)`, nameGap: 44 },
     } }, { query: { maxWidth: 550 }, option: {
       grid: { left: 64, right: 18 },
       xAxis: { name: 'Baseline predicted risk (%)', nameTextStyle: { fontSize: 13 }, axisLabel: { fontSize: 13, hideOverlap: true } },

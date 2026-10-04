@@ -86,3 +86,52 @@
   .overview-context { min-height: 192px; padding: 20px 0; }
   .overview-context h2 { margin-bottom: 12px; }
 }
+@media (min-width: 1201px) and (max-width: 1600px), (min-width: 1201px) and (max-height: 799px) {
+  .overview .page-heading { margin-bottom: var(--viewport-gap); }
+  .overview-kpis .kpi { min-height: 0; padding: var(--viewport-padding); }
+  .overview-kpis dd { font-size: clamp(2rem, 4.5dvh, 2.75rem); margin: 4px 0; }
+  .overview-kpis .kpi-support { font-size: .8125rem; }
+  .overview-middle > .panel { height: auto; min-height: clamp(224px, 31dvh, 264px); padding: var(--viewport-padding); }
+  .overview h2 { font-size: 1.0625rem; }
+  .effect-value { font-size: clamp(3rem, 6.5dvh, 3.75rem); margin: 12px 0; }
+  .effect-context, .effect-direction { font-size: .875rem; }
+  .effect-direction { padding-top: 8px; }
+  .ci-summary { font-size: 1rem; margin-top: 6px; }
+  .overview-ci .chart-surface { height: clamp(152px, 21dvh, 164px); }
+  .ci-caption { font-size: .8125rem; margin-top: 4px; }
+  .allocation-table { margin-top: 8px; height: clamp(160px, 23dvh, 195px); }
+  .overview-table th, .overview-table td { padding: 6px 10px; }
+  .overview-table thead th { font-size: .8125rem; }
+  .overview-table tbody th { font-size: .875rem; }
+  .allocation-table td { font-size: clamp(1.25rem, 3dvh, 1.5rem); }
+  .overview-context { min-height: 0; padding: var(--viewport-padding) 0; }
+  .overview-context section { padding: 0 10px; }
+  .overview-context h2 { margin-bottom: 6px; }
+  .overview-context ul { font-size: .875rem; line-height: 1.4; }
+  .completeness-table td { font-size: 1.3333rem; }
+}
+@media (min-width: 1601px) and (max-height: 849px) {
+  .overview .page-heading { margin-bottom: var(--viewport-gap); }
+  .overview-kpis, .overview-middle { gap: var(--viewport-gap); margin-bottom: var(--viewport-gap); }
+  .overview-kpis .kpi { min-height: 0; padding: var(--viewport-padding); }
+  .overview-kpis dd { font-size: clamp(2.25rem, calc(4dvh + 8px), 3.1667rem); margin: 4px 0; }
+  .overview-kpis .kpi-support { font-size: .8125rem; }
+  .overview-middle > .panel { height: auto; min-height: clamp(232px, 33dvh, 280px); padding: var(--viewport-padding); }
+  .overview h2 { font-size: 1.125rem; }
+  .effect-value { font-size: clamp(3rem, 7dvh, 4rem); margin: 12px 0; }
+  .effect-context, .effect-direction { font-size: .875rem; }
+  .effect-direction { padding-top: 8px; }
+  .ci-summary { font-size: 1.0625rem; margin-top: 6px; }
+  .overview-ci .chart-surface { height: clamp(152px, 21dvh, 164px); }
+  .ci-caption { font-size: .8125rem; margin-top: 4px; }
+  .allocation-table { margin-top: 8px; height: clamp(160px, 23dvh, 195px); }
+  .overview-table th, .overview-table td { padding: 6px 10px; }
+  .overview-table thead th { font-size: .8125rem; }
+  .overview-table tbody th { font-size: .875rem; }
+  .allocation-table td { font-size: clamp(1.25rem, 3dvh, 1.5rem); }
+  .overview-context { min-height: 0; padding: var(--viewport-padding) 0; }
+  .overview-context section { padding: 0 10px; }
+  .overview-context h2 { margin-bottom: 6px; }
+  .overview-context ul { font-size: .875rem; line-height: 1.4; }
+  .completeness-table td { font-size: 1.3333rem; }
+}
