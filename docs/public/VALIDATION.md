@@ -16,7 +16,7 @@ Use `npm` instead of `npm.cmd` in other shells. The public-data regression rejec
 
 ## Retained local scientific and interaction evidence
 
-The local scientific workflow reconciles 141/141 frozen targets and passes six data regression tests. Deterministic exports preserve source precision; UI rounding is presentation-only. These checks require retained local scientific inputs and do not imply that the public repository can reproduce the underlying trial analysis.
+The local data/reconciliation workflow checks 141/141 frozen analytical targets and passes six web-data exporter regression tests. The six tests are not the entire Python scientific test suite. Deterministic exports preserve source precision; UI rounding is presentation-only. Local source reconciliation requires retained analytical inputs and does not imply that the public repository can reproduce the underlying trial analysis.
 
 Recorded rebuilt-browser checks cover selectors, URL/default/history behavior, keyboard navigation, tooltip/focus/touch access, loading/error states and responsive/enlarged-text layouts. Rollout checks include fifteen policy/anchor states and all 128 inspection capacities. Robustness checks include 75 selector states, eighteen sort combinations, all 127 village rows and selection integrity. The local public-only rehearsal builds independently of private files and serves thirteen JSON assets, five routes and 29 approved build files.
 

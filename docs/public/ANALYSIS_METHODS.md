@@ -1,10 +1,27 @@
 # Analysis methods and provenance
 
+## Scientific work before reporting
+
+Python/R analysis established the scientific contracts before Power BI and the native web application were built. Reporting consumes validated aggregates rather than fitting models or estimating treatment effects.
+
+| Analytical step | Implemented method/check | Interpretation boundary |
+| --- | --- | --- |
+| Provenance and data quality | Source checksum, identifier/cluster integrity, coding and outcome-missingness checks | Source-data availability does not imply complete public reproduction |
+| Causal cohort | Randomized assignment, explicit outcome availability and fixed effect/benefit signs | Missing outcomes are not imputed to force an ITT label |
+| Average effect | Adjusted village-random-intercept model; comparison with the published estimate | Public covariate/inference differences remain qualified |
+| Classical heterogeneity | Six prespecified moderators and interaction tests | Descriptive subgroup intervals do not establish interaction |
+| Benefit models | Simple HTE benchmark and honest cluster-aware GRF with whole-village folds | No held-out village enters its training data |
+| HTE validation | Cross-fitted evaluation scores, AUTOC, calibration and paired comparisons | Prioritization support does not demonstrate superiority |
+| Village rollout | Frozen village priorities, whole-village capacity and participant-weighted value | Retrospective scenarios are not historical quotas or optimal cutoffs |
+| Uncertainty and robustness | Village bootstrap, alternative ranking/weighting and influence diagnostics | Conditional pointwise intervals and descriptive coverage limit claims |
+
 ## Study and estimand
 
 The source is the SMARTER village-cluster randomized trial in rural China, reported in [BMJ](https://doi.org/10.1136/bmj-2024-082765), with public source data identified by [Dryad](https://doi.org/10.5061/dryad.tmpg4f58w). Source-data availability does not mean that participant-level working files are included here. Dataset and reference-code rights are distinct; the restricted statistical reference was not redistributed or reused as implementation source.
 
 The trial randomized 4,533 participants in 127 villages. Primary outcomes are observed for 4,508 participants; 25 missing outcomes were not imputed. The analysis is an available-primary-outcome analysis according to randomized village assignment, not an unqualified full-population intention-to-treat claim.
+
+Data-quality checks established one record per participant, consistent assignment within each village and reconciled population/outcome counts. Predictor roles were checked by timing: identifiers, treatment assignment and post-treatment fields cannot enter the ordinary HTE feature matrix. These checks prevent leakage; they do not resolve uncertainty caused by missing outcomes or limited cluster information.
 
 The endpoint is change in predicted 10-year ASCVD risk: follow-up minus baseline. Treatment effect is intervention minus control; negative values favor intervention. Displayed predicted benefit reverses this sign, so positive benefit is favorable. Effects concern village assignment to the intervention package, not individual prescriptions or effects of isolated components.
 

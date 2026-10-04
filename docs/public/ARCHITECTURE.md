@@ -5,13 +5,22 @@
 The scientific workflow independently implements estimation in Python and R. Frozen, validated aggregate outputs supply two reporting implementations: a five-page Power BI dashboard and a native React/TypeScript application. The web application is not exported from, embedded in, or connected to Power BI.
 
 ```text
-Private trial working data → Python/R estimation and cluster-aware validation
+Locally retained trial data → Python/R estimation and cluster-aware validation
                            → frozen aggregate contracts
                               ├─ private Power BI implementation → public PDF/images
                               └─ deterministic whitelist export → public JSON → React/ECharts
 ```
 
-Scientific estimates are not recomputed in the browser. Public documentation explains the methods but does not supply the private analytical reproduction inputs or editable Power BI source.
+Scientific estimates are not recomputed in the browser. Public documentation explains the methods, but this release does not distribute the local scientific implementation, participant-level working records or editable Power BI source. The original anonymized dataset is externally available through the source linked in the [methods](ANALYSIS_METHODS.md); local retention does not mean all inputs are inherently confidential.
+
+## Public artifact responsibilities
+
+| Public artifact | Purpose | Reproducibility boundary |
+| --- | --- | --- |
+| React/TypeScript source and web checks | Inspectable interactive implementation | Builds independently from shipped aggregate assets |
+| Aggregate JSON, schemas and manifest | Typed, integrity-checked browser data | Frozen analytical outputs, not participant-level inputs |
+| Power BI PDF, images and specification | Evidence of the implemented five-page report | Static outputs, not editable report/model source |
+| Curated methods and technical docs | Estimands, reasoning, design and validation | Explain the analysis without promising an executable public scientific pipeline |
 
 ## Data boundary
 

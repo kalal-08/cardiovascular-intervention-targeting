@@ -1,71 +1,96 @@
 # Cardiovascular Intervention Targeting
 
-A cluster-aware decision-analytics project combining independent Python/R analysis, a five-page Power BI dashboard and a native React/TypeScript application.
+An end-to-end decision-analytics project: independent Python/R trial analysis, a five-page Power BI dashboard, and a native React/TypeScript web application.
 
-The central question: does prioritizing villages by predicted intervention benefit improve retrospective rollout value compared with prioritizing baseline risk or selecting villages at random?
+## Problem
 
-## Problem and approach
+High cardiovascular risk does not necessarily imply greater benefit from an intervention. This project asks whether predicted treatment benefit can improve retrospective whole-village prioritization compared with baseline-risk ranking or random selection.
 
-High baseline cardiovascular risk does not necessarily imply greater treatment benefit. This project compares GRF, Simple HTE and Baseline Risk prioritization using the SMARTER village-cluster randomized trial: **4,533 participants in 127 villages**, with **4,508 observed primary outcomes**.
+The source is the SMARTER village-cluster randomized trial: **4,533 participants across 127 villages**, with **4,508 observed primary outcomes**.
 
-The workflow independently reproduces the average effect, estimates heterogeneity, validates predictions out of village, and evaluates hypothetical capacity-constrained rollout with village-level uncertainty. Villages remain indivisible validation, resampling and capacity units.
+## Analytical approach
 
-The analysis was first implemented and validated as a five-page Power BI dashboard. A native React/TypeScript web application was then implemented independently using the same validated analytical contracts and approved dashboard design. Power BI source/model files are retained privately; approved report outputs and implementation documentation are provided publicly.
+The scientific work preceded the dashboards:
 
-## Results and interpretation
+1. Audit source provenance, trial design, variable roles and missing outcomes.
+2. Construct the causal cohort and independently reproduce the adjusted average effect.
+3. Examine prespecified subgroup interactions and fit Simple HTE and cluster-aware generalized random forest models.
+4. Validate predictions out of village using prioritization, calibration and paired comparisons.
+5. Aggregate village signals and evaluate hypothetical whole-village rollout.
+6. Assess village-bootstrap uncertainty, ranking sensitivity and descriptive coverage.
+7. Present validated aggregates in Power BI, then independently implement the native web application.
 
-- Adjusted effect: **−1.880 percentage points** (95% CI **−2.564 to −1.196**); lower predicted risk favors intervention.
-- GRF prioritization validation is supported within this trial, but superiority over Simple HTE or Baseline Risk is not demonstrated.
-- All twelve policy-versus-random gain intervals at prespecified non-full capacities include zero: **no single robust policy winner is established**.
-- At full capacity, all policies reconcile to approximately **1.8641 pp** population rollout value, with zero gain versus random. This is a consistency endpoint, not an optimum.
+Python/R owns estimation and validation. Power BI and the web application present the same frozen analytical contracts; the web app is not exported from or embedded in Power BI.
 
-The endpoint is predicted 10-year ASCVD risk, not observed cardiovascular events. Missing outcomes were not imputed; this is an available-primary-outcome analysis according to randomized village assignment. Results are retrospective trial-population evidence, not clinical prescriptions, cost-effectiveness estimates or operational rollout recommendations.
+## Key findings
 
-## Explore the dashboard
+- **Adjusted effect:** −1.880 percentage points (95% CI −2.564 to −1.196); lower predicted risk favors intervention.
+- **HTE validation:** GRF prioritization is supported within this trial, but superiority over Simple HTE or Baseline Risk is not demonstrated.
+- **Rollout:** all twelve policy-versus-random gain intervals at prespecified non-full capacities include zero. **No single robust policy winner is established.**
+- **Full capacity:** all policies reconcile to approximately 1.8641 pp population rollout value, with zero gain versus random—not an identified optimum.
 
-**Power BI proof:** [read the final five-page report PDF](reports/Cardiovascular_Intervention_Targeting_final.pdf), or view the [final page screenshots and implementation specification](powerbi/PUBLIC_README.md). The report is linked rather than embedded as a reduced-size screenshot.
+The endpoint is predicted 10-year ASCVD risk, not observed cardiovascular events. Missing outcomes were not imputed. Findings concern available outcomes under randomized village assignment and retrospective scenarios—not individual clinical advice, cost-effectiveness or operational rollout recommendations.
 
-**Interactive web application:** deployment pending. The live application link will be added after deployment and hosted validation. Local setup is available below.
+## Dashboard
 
-| Page | Purpose |
+**Power BI:** [final five-page PDF](reports/Cardiovascular_Intervention_Targeting_final.pdf) · [screenshots and implementation specification](powerbi/PUBLIC_README.md)
+
+**Interactive web app:** deployment pending; the live link will be added after hosted validation.
+
+| Page | Question answered |
 | --- | --- |
-| Overview | Population, allocation and adjusted average effect |
-| Risk vs Benefit | Village baseline risk versus predicted benefit |
-| HTE Validation | Prioritization, calibration and descriptive subgroup evidence |
-| Rollout | Population value and gain versus random across capacity |
-| Robustness | Rankings, overlap, sensitivity and descriptive coverage |
-
-The five pages connect average-effect evidence to benefit validation, hypothetical rollout and robustness. Cloudflare Workers Static Assets is the configured web hosting target.
+| Overview | What does the trial show about the average intervention effect? |
+| Risk vs Benefit | How does baseline risk relate to predicted village benefit? |
+| HTE Validation | Do benefit scores support prioritization, and do comparisons establish superiority? |
+| Rollout | How do population value and gain versus random vary with capacity? |
+| Robustness | How stable are policy rankings, overlap and descriptive coverage? |
 
 ## Architecture and engineering
 
-Python/R owns scientific estimation; frozen aggregate contracts supply Power BI and the independent web app. A deterministic whitelist exporter produces eleven aggregate datasets plus schemas and a manifest. React owns controls, native tables and page-scoped URL/history state; ECharts owns plots. Same-origin JSON is validated before display. There is no runtime analytical API, database, login or browser-side scientific re-estimation.
+```text
+Trial data → Python/R analysis → validated aggregate contracts
+                                ├─ Power BI → final report outputs
+                                └─ deterministic JSON export → React/TypeScript + ECharts
+```
 
-### Engineering challenges and solutions
+- **Cluster-aware analysis:** whole villages remain intact in training folds and resampling.
+- **Deterministic data contracts:** explicit schemas, generated types and hashes preserve source precision; rounding is presentation-only.
+- **Consistent interactions:** shared controls, native tables and page-scoped URL/history state support exploration without recalculating scientific estimates.
+- **Static delivery:** thirteen validated JSON assets power the public app without a runtime analytical API, database, login or secrets.
 
-- **Cluster leakage:** whole villages stay together in model-training folds and resampling rather than splitting participants randomly.
-- **Reproducible reporting:** deterministic exports, explicit schemas and hash checks keep source precision separate from display rounding.
-- **Honest decision support:** point estimates remain paired with uncertainty, supported prioritization is distinguished from superiority, and full rollout is not presented as an optimum.
-- **Consistent interaction:** shared controls and navigation preserve page-scoped selectors, URL/history behavior and keyboard access across all five pages.
-- **Public delivery:** validated aggregate-only assets support an independent static application without exposing the private trial-working pipeline or editable Power BI model.
+| Engineering challenge | Solution | Verification |
+| --- | --- | --- |
+| Separating risk burden from causal benefit | Distinct fixed policy signals and qualified comparison results | Source reconciliation and selector checks |
+| Keeping two reporting implementations consistent | Frozen aggregate contracts with deterministic exports | Schema, hash and numerical-target checks |
+| Preserving usable interactive exploration | Shared navigation, URL state, native tables and readable chart alternatives | Recorded browser/history, sort and responsive checks |
 
-The public stack is React 19.3.0, TypeScript 7.0.2, Vite 8.3.2 and ECharts 6.1.0, with Cloudflare static-assets configuration. See [architecture](docs/public/ARCHITECTURE.md) for ownership and state behavior.
+The web uses React, TypeScript, Vite and ECharts. Cloudflare Workers Static Assets is the configured hosting target. Details: [architecture](docs/public/ARCHITECTURE.md) and [dashboard decisions](docs/public/DASHBOARD_DECISIONS.md).
 
-## Public repository structure
+## Repository structure
+
+The current public release contains:
 
 ```text
-README.md
-docs/public/                 Methods, architecture, decisions and validation
-powerbi/PUBLIC_README.md      Public Power BI implementation specification
-reports/
-  Cardiovascular_Intervention_Targeting_final.pdf
-  figures/powerbi/phase12b_final_20261001/   Five final page images
-web/
-  src/                       Typed React pages, shared controls and charts
-  public/data/               Validated aggregate JSON and contracts
-  scripts/                   Public validation and retained deeper QA tools
-  package.json, package-lock.json, vite.config.ts, wrangler.jsonc
+cardiovascular-intervention-targeting/
+├── docs/public/              # Scientific methods, architecture and validation
+├── powerbi/
+│   └── PUBLIC_README.md      # Power BI implementation and final screenshot links
+├── reports/
+│   ├── Cardiovascular_Intervention_Targeting_final.pdf
+│   └── figures/powerbi/      # Five approved final page images
+├── web/
+│   ├── src/                 # React pages, shared components, charts and state
+│   ├── public/data/         # Aggregate JSON, schemas and integrity manifest
+│   ├── scripts/             # Data export, validation and regression checks
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── vite.config.ts
+│   └── wrangler.jsonc
+├── .gitignore
+└── README.md
 ```
+
+The scientific Python/R implementation and its root tests are retained locally and are **not yet included in this public release**. Their methodology and findings are documented below.
 
 ## Run locally
 
@@ -79,39 +104,23 @@ npm.cmd run build
 npm.cmd run preview
 ```
 
-Open `http://127.0.0.1:4173/overview`; stop preview with Ctrl+C. Use `npm.cmd run dev` for development. Other shells can use `npm` instead of `npm.cmd`.
+Open `http://127.0.0.1:4173/overview`. Stop preview with Ctrl+C; use `npm.cmd run dev` for development. Other shells can use `npm` instead of `npm.cmd`.
 
-The public build needs no private analytical inputs, Power BI installation, secrets or environment variables. No `.env.example` is required. Preview is local, not production deployment.
+The public web build requires no participant-level data or Power BI installation. Scientific regeneration and deeper local checks have separate dependencies.
 
-## Technical documentation
+## Methods and validation
 
 - [Analysis methods and provenance](docs/public/ANALYSIS_METHODS.md)
 - [HTE validation](docs/public/HTE_VALIDATION.md)
 - [Village rollout and uncertainty](docs/public/ROLLOUT_AND_UNCERTAINTY.md)
-- [Architecture](docs/public/ARCHITECTURE.md)
-- [Dashboard decisions](docs/public/DASHBOARD_DECISIONS.md)
-- [Validation and limitations](docs/public/VALIDATION.md)
+- [Validation evidence and known limitations](docs/public/VALIDATION.md)
 
-Local scientific validation covers 141 reconciliation targets and six data regressions. The public-only build rehearsal serves thirteen JSON assets, five routes and 29 approved build files. These checks do not constitute hosted or accessibility certification.
+Local data reconciliation passes 141 frozen analytical targets and six web-data exporter regression tests. Public checks validate the shipped data, TypeScript/build and local route/asset serving; recorded browser checks cover selectors, navigation, sorting and responsive interactions. These are not claims of production deployment or accessibility certification.
 
-## Publication and reproducibility boundary
+## Data and publication scope
 
-The public React/TypeScript implementation is inspectable and builds from shipped aggregate assets. Publication is selective, not a claim that every local project file is publicly reproducible.
+Source references: [SMARTER publication](https://doi.org/10.1136/bmj-2024-082765) · [Dryad dataset](https://doi.org/10.5061/dryad.tmpg4f58w).
 
-| Material | Public-release treatment |
-| --- | --- |
-| React/TypeScript source, public-data checks and build configuration | Included as the inspectable application implementation |
-| Validated aggregate JSON, schemas and manifest | Included for independent public builds and dashboard exploration |
-| Final Power BI PDF, five screenshots and public specification | Included as implementation evidence; editable source remains private |
-| Participant-level CSVs, derived working records and private analytical inputs | Excluded to preserve the data/privacy boundary; small file size does not establish publication safety |
-| Editable Power BI report/model internals and restricted reference material | Excluded under the approved publication and source-use boundaries |
-| Internal implementation plan, decision log, agent instructions and phase records | Retained locally; durable methods, architecture and decisions are curated in the linked public docs instead |
-| Backups, intermediate captures, archives and verbose execution logs | Excluded as local recovery/history rather than current public implementation |
+The public application includes reviewed aggregate JSON, not participant-level raw or derived working records. The source dataset is publicly available through Dryad; the complete local scientific pipeline and intermediate outputs are not distributed here.
 
-Internal planning records are not all inherently confidential: they are excluded primarily to avoid process noise, duplication and stale instructions. Retained scientific regeneration/reconciliation commands require local inputs; they are not public-build prerequisites. Public aggregate JSON already supplies the dashboard's data contract; additional CSV exports are not required to demonstrate the application.
-
-Source study: [BMJ publication](https://doi.org/10.1136/bmj-2024-082765) and [Dryad data record](https://doi.org/10.5061/dryad.tmpg4f58w). Public source-data availability does not imply that all project reproduction inputs are distributed.
-
-Exact Baseline Risk orange **`#F28C00`** is preserved. Its approximately 2.463:1 text contrast on white remains an open accessibility limitation. Screen-reader, physical-device, Firefox/Safari and hosted validation are not claimed. The PDF is untagged; ECharts has a known bundle-size warning.
-
-No open-source LICENSE has been authorized. Public visibility does not grant reuse rights to the private Power BI implementation or other project materials.
+Editable Power BI report/model files remain private. Internal plans, agent instructions, execution logs and backups stay local; useful technical reasoning is curated in the public documentation.
