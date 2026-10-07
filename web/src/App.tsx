@@ -2,12 +2,19 @@ import { lazy, Suspense } from 'react';
 import { PAGES } from './contract';
 import { usePageNavigation } from './navigation';
 import { AppShell, PageHeader, Panel, Status } from './components/layout';
+import { loadDatasets } from './data/load';
+import type { WebDatasets } from './data.generated';
 
-const Overview = lazy(() => import('./pages/Overview'));
-const RiskBenefit = lazy(() => import('./pages/RiskBenefit'));
-const HTEValidation = lazy(() => import('./pages/HTEValidation'));
-const Rollout = lazy(() => import('./pages/Rollout'));
-const Robustness = lazy(() => import('./pages/Robustness'));
+function requestedPage<T>(code: Promise<T>, names: readonly (keyof WebDatasets)[]): Promise<T> {
+  // Page effects consume the same verified cache and own data-error presentation.
+  void loadDatasets(names).catch(() => {});
+  return code;
+}
+const Overview = lazy(() => requestedPage(import('./pages/Overview'), ['overview']));
+const RiskBenefit = lazy(() => requestedPage(import('./pages/RiskBenefit'), ['villages', 'validation']));
+const HTEValidation = lazy(() => requestedPage(import('./pages/HTEValidation'), ['validation', 'subgroups']));
+const Rollout = lazy(() => requestedPage(import('./pages/Rollout'), ['rollout', 'anchors', 'overview']));
+const Robustness = lazy(() => requestedPage(import('./pages/Robustness'), ['overview', 'villages', 'anchors', 'overlap', 'robustness', 'coverage']));
 
 export default function App() {
   const navigation = usePageNavigation();

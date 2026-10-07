@@ -57,6 +57,7 @@ reports/audits/
 node_modules/
 /web/dist/
 /web/dist-spikes/
+/web/dist-warming-control/
 /web/.wrangler/
 
 # Local scientific outputs; reviewed source/configuration is public
@@ -83,6 +84,7 @@ node_modules/
 # Only final approved reporting outputs are public evidence
 /reports/*
 !/reports/Cardiovascular_Intervention_Targeting_final.pdf
+!/reports/CIT-PowerBI-Proof.pdf
 !/reports/figures/
 /reports/figures/*
 !/reports/figures/powerbi/

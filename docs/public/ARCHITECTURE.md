@@ -28,7 +28,7 @@ Scientific estimates are not recomputed in the browser. Reviewed Python/R source
 
 The public application ships eleven aggregate datasets plus schemas and a versioned manifest: thirteen JSON assets. The deterministic exporter uses an explicit field/row whitelist; generated TypeScript types express the exported contracts. Participant-level working records, treatment joins and restricted reference material are not browser assets.
 
-The same-origin loader fetches `/data/` assets, checks contract integrity and validates required fields, types and keys before use. Shared pending requests prevent redundant loading. Failures produce a safe error state rather than silently displaying partial scientific results. Hashes detect byte changes against the supplied manifest; they are not an independent authenticity signature.
+The requested route starts code and required data loading together before mount. Known same-origin `/data/` downloads overlap, but contract versions, hashes, required fields, types and keys are verified before consumption. Shared requests prevent redundant downloads; rejected cache entries permit a later fresh-request retry. Data failures retain explicit error presentation rather than partial scientific results. Failed lazy-module imports remain a separate reload-recovery limitation. No background or hover/focus warming is implemented. Hashes detect byte changes against the supplied manifest, not independent authenticity.
 
 ## Application ownership
 
@@ -38,6 +38,10 @@ The routes are `/overview`, `/risk-vs-benefit`, `/hte-validation`, `/rollout` an
 
 ## Build and hosting
 
-Vite compiles the application. Cloudflare Workers Static Assets is the configured hosting target, with SPA fallback for direct route requests. No runtime database, analytical API, authentication or secrets are required. Deployment and hosted validation have not been performed.
+Vite compiles the application; Cloudflare Workers Static Assets serves the [live dashboard](https://cit-dashboard.urvilkalal07.workers.dev/overview) and same-origin aggregate JSON. SPA fallback supports direct requests to all five routes. No runtime database, analytical API, authentication or secrets are required.
 
-Use the [root quick start](../../README.md#run-locally) for installation and preview. Public builds validate shipped JSON without private inputs. Local scientific regeneration and reconciliation remain separate from the public build. See [validation](VALIDATION.md) and [analysis methods](ANALYSIS_METHODS.md).
+The web build depends only on shipped public assets. Scientific regeneration and editable Power BI authoring are separate workflows, not deployment prerequisites. The existing Git integration builds a preview version; production promotion is a separate release action. Even documentation-only pushes may trigger that build.
+
+Viewport-aware CSS controls spacing and reflow; chart containers drive ECharts resizing without recreating the scientific data. Dense tables and evidence keep intentional scrolling rather than hiding content. See [dashboard decisions](DASHBOARD_DECISIONS.md#viewport-adaptation) for layout and interaction boundaries.
+
+Use the [root quick start](../../README.md#run-the-web-application-locally) for installation and preview. Public builds validate shipped JSON without private inputs. Local scientific regeneration and reconciliation remain separate from the public build. See [validation](VALIDATION.md) and [analysis methods](ANALYSIS_METHODS.md).

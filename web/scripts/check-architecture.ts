@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { PAGES } from '../src/contract.ts';
 import { PAGE_DEFAULTS, pageURL, parsePageState } from '../src/state.ts';
 import { POLICY, CAPACITY_DOMAIN, anchors, isCurveCapacity } from '../src/metadata.ts';
@@ -68,11 +69,63 @@ try {
   };
   const corrupted = await import('../src/data/load.ts' + '?case=corrupted');
   await assert.rejects(corrupted.loadDataset('villages'), /integrity/);
+  await assert.rejects(corrupted.loadDataset('villages'), /integrity/);
+  const invalidOverview = JSON.parse(source('overview'));
+  invalidOverview.rows[0].unexpected = true;
+  const invalidBody = JSON.stringify(invalidOverview);
+  const invalidManifest = JSON.parse(source('manifest'));
+  invalidManifest.datasets.overview.sha256 = createHash('sha256').update(invalidBody).digest('hex');
+  globalThis.fetch = async input => {
+    const name = String(input).split('/').at(-1)!.replace('.json', '');
+    const body = name === 'manifest' ? JSON.stringify(invalidManifest) : name === 'overview' ? invalidBody : source(name);
+    return new Response(body, { headers: { 'Content-Type': 'application/json' } });
+  };
+  const invalidSchema = await import('../src/data/load.ts' + '?case=invalid-schema');
+  await assert.rejects(invalidSchema.loadDataset('overview'), /Unexpected/);
+  await assert.rejects(invalidSchema.loadDataset('overview'), /Unexpected/);
+  globalThis.fetch = async input => {
+    const name = String(input).split('/').at(-1)!.replace('.json', '');
+    return new Response(source(name) + (name === 'schemas' ? ' ' : ''), { headers: { 'Content-Type': 'application/json' } });
+  };
+  const corruptedSchema = await import('../src/data/load.ts' + '?case=schema-integrity');
+  await assert.rejects(corruptedSchema.loadDataset('overview'), /integrity/);
+  await assert.rejects(corruptedSchema.loadDataset('overview'), /integrity/);
   globalThis.fetch = async () => new Response('{"schema_version":"wrong"}', { headers: { 'Content-Type': 'application/json' } });
   const unsupported = await import('../src/data/load.ts' + '?case=version');
   await assert.rejects(unsupported.loadDataset('overview'), /version/);
   globalThis.fetch = async () => new Response('<html>fallback</html>', { headers: { 'Content-Type': 'text/html' } });
   const failed = await import('../src/data/load.ts' + '?case=network');
   await assert.rejects(failed.loadDataset('overview'), /could not be loaded/);
+  for (const target of ['manifest', 'schemas', 'overview']) {
+    let failures = 1;
+    let attempts = 0;
+    globalThis.fetch = async input => {
+      const name = String(input).split('/').at(-1)!.replace('.json', '');
+      if (name === target) attempts++;
+      if (name === target && failures-- > 0) throw new Error('Transient download failure');
+      return new Response(source(name), { headers: { 'Content-Type': 'application/json' } });
+    };
+    const recovery = await import('../src/data/load.ts' + `?case=retry-${target}`);
+    await assert.rejects(recovery.loadDataset('overview'), /Transient/);
+    assert.deepEqual(await recovery.loadDataset('overview'), JSON.parse(source('overview')));
+    assert.equal(attempts, 2, `${target} must make a fresh request after failure`);
+  }
+  let release!: () => void;
+  const held = new Promise<void>(resolve => { release = resolve; });
+  const started: string[] = [];
+  globalThis.fetch = async input => {
+    const name = String(input).split('/').at(-1)!.replace('.json', '');
+    started.push(name);
+    if (name === 'manifest') await held;
+    return new Response(source(name), { headers: { 'Content-Type': 'application/json' } });
+  };
+  const parallel = await import('../src/data/load.ts' + '?case=parallel');
+  let consumed = false;
+  const waiting = parallel.loadDataset('overview').then(() => { consumed = true; });
+  await new Promise(resolve => setTimeout(resolve, 0));
+  try {
+    assert.deepEqual(new Set(started), new Set(['manifest', 'schemas', 'overview']));
+    assert.equal(consumed, false, 'Unverified data must not be consumed');
+  } finally { release(); await waiting; }
 } finally { globalThis.fetch = originalFetch; }
-console.log('PASS: canonical page-scoped URL/defaults, metadata/tokens, capacities, units/formatting; all 11 typed datasets, shared cache, schema and integrity/version/network failures.');
+console.log('PASS: canonical page-scoped URL/defaults, metadata/tokens, capacities, units/formatting; all 11 typed datasets, shared cache, verified parallel downloads, fresh-request transient recovery and repeated schema/integrity/version/network rejection.');

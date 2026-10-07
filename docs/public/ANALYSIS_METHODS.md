@@ -45,7 +45,7 @@ The forest uses honest estimation and the trial's target propensity of 0.5. This
 
 The reviewed Python source, three R scripts, scientific tests and dependency configuration are included. Acquire the anonymized SMARTER CSV separately from the linked Dryad record (version 4, file 4062477), respecting its dataset terms. Save it as `data/raw/smarter_anonymised_data.csv`. The expected SHA-256 is `2a42364e388ed21ae9b4dc0038424c3e4e4ffb60e9aebd8edef7db8d356b7741`; do not substitute a different dataset version silently.
 
-From the repository root in PowerShell, with Python and R installed:
+Use a separate working copy for regeneration: the runner writes derived outputs, including the eight supplied CSVs. Compare regenerated results with the approved release rather than silently replacing it. From that working copy's root in PowerShell, with Python and R installed:
 
 ```powershell
 python -m venv .venv
